@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mark Huckins — Tennis Lessons San Diego | Private Instruction</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Professional tennis instruction in San Diego by Mark Huckins — IMG Academy trained player and coach. Private lessons, group instruction, and adult clinics for all ages and skill levels. Day and evening availability." />
+  <meta name="keywords" content="tennis lessons San Diego, private tennis instruction San Diego, tennis coach San Diego, tennis lessons near me, adult tennis lessons San Diego, junior tennis lessons San Diego, group tennis lessons San Diego, IMG Academy tennis, San Diego tennis instructor, tennis clinics San Diego" />
+  <meta name="author" content="Mark Huckins" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.sdtennislessons.com/" />
+
+  <!-- Open Graph (for social sharing previews) -->
+  <meta property="og:title" content="Mark Huckins — Tennis Lessons San Diego" />
+  <meta property="og:description" content="IMG Academy trained player and coach offering private tennis lessons, group instruction, and clinics in San Diego. All ages and skill levels welcome." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.sdtennislessons.com/" />
+  <meta property="og:site_name" content="SD Tennis Lessons" />
+
+  <!-- Local Business Schema (helps Google understand your business) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Mark Huckins Tennis Instruction",
+    "description": "Professional tennis instruction for all ages and skill levels in San Diego. Private lessons, group instruction, and adult clinics.",
+    "url": "https://www.sdtennislessons.com",
+    "telephone": "+1-858-752-4321",
+    "email": "Mark.huckins@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San Diego",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 32.7157,
+      "longitude": -117.1611
+    },
+    "areaServed": "San Diego, CA",
+    "priceRange": "$$",
+    "openingHours": "Mo-Su 07:00-21:00",
+    "sameAs": []
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #080808;
+      --off-black: #111010;
+      --surface: #161514;
+      --border: rgba(255,255,255,0.08);
+      --white: #f5f2ee;
+      --dim: rgba(245,242,238,0.45);
+      --accent: #c8a96e;
+      --accent-dim: rgba(200,169,110,0.1);
+      --accent-border: rgba(200,169,110,0.3);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 3rem;
+    }
+
+    nav::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(8,8,8,0.95) 0%, transparent 100%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.12em;
+      color: var(--white);
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dim);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-book {
+      color: var(--accent) !important;
+      border: 1px solid var(--accent-border) !important;
+      padding: 0.55rem 1.4rem;
+      border-radius: 2px;
+      font-size: 0.85rem !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-book:hover { background: var(--accent-dim) !important; }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -10%; right: -5%;
+      width: 55vw; height: 130vh;
+      background: linear-gradient(135deg, transparent 48%, rgba(200,169,110,0.04) 49%, rgba(200,169,110,0.06) 51%, transparent 52%);
+      transform: rotate(-8deg);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 60vw; height: 60vh;
+      background: radial-gradient(ellipse at 20% 100%, rgba(200,169,110,0.07) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 120px 3rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 4rem;
+      align-items: end;
+    }
+
+    .hero-text { display: flex; flex-direction: column; }
+
+    .hero-illustration {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 1s 0.7s forwards;
+    }
+
+    .hero-illustration svg {
+      width: 100%;
+      height: auto;
+    }
+
+    .court-draw {
+      stroke-dasharray: 1200;
+      stroke-dashoffset: 1200;
+      animation: drawLine 2.5s 1s ease forwards;
+    }
+
+    .court-draw-2 {
+      stroke-dasharray: 900;
+      stroke-dashoffset: 900;
+      animation: drawLine 2s 1.4s ease forwards;
+    }
+
+    .court-draw-3 {
+      stroke-dasharray: 600;
+      stroke-dashoffset: 600;
+      animation: drawLine 1.6s 1.8s ease forwards;
+    }
+
+    .court-fade {
+      opacity: 0;
+      animation: fadeIn 0.8s 2.4s forwards;
+    }
+
+    @keyframes drawLine { to { stroke-dashoffset: 0; } }
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+
+    .hero-eyebrow span {
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .eyebrow-line { width: 36px; height: 1px; background: var(--accent); opacity: 0.6; }
+
+    .hero-headline {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(5.5rem, 15vw, 17rem);
+      line-height: 0.88;
+      letter-spacing: -0.01em;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.35s forwards;
+    }
+
+    .hero-headline .line-ghost {
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(245,242,238,0.2);
+      display: block;
+    }
+
+    .hero-headline .line-accent { color: var(--accent); display: block; }
+
+    .hero-sub-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 3rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      opacity: 0;
+      animation: fadeUp 0.8s 0.6s forwards;
+    }
+
+    .hero-tagline {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: clamp(0.95rem, 1.5vw, 1.25rem);
+      color: var(--dim);
+      max-width: 400px;
+      line-height: 1.6;
+    }
+
+    .hero-contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.55rem;
+    }
+
+    .hero-contacts a {
+      text-decoration: none;
+      font-size: 1rem;
+      letter-spacing: 0.07em;
+      color: rgba(245,242,238,0.8);
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .hero-contacts a:hover { color: var(--white); }
+
+    .contact-dot { width: 4px; height: 4px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
+
+    .hero-scroll-bar {
+      position: relative;
+      z-index: 2;
+      padding: 1.8rem 3rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.9s forwards;
+    }
+
+    .scroll-line { width: 40px; height: 1px; background: var(--border); position: relative; overflow: hidden; }
+    .scroll-line::after {
+      content: '';
+      position: absolute; top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: var(--accent);
+      animation: slide 2s 1.5s infinite;
+    }
+
+    @keyframes slide { from { left: -100%; } to { left: 100%; } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+    .scroll-text { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim); }
+
+    /* ─── ACADEMY BAND ─── */
+    .academy-band {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .a-item { display: flex; align-items: center; gap: 0.6rem; }
+    .a-label { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+    .a-value { font-size: 0.85rem; letter-spacing: 0.05em; color: var(--dim); }
+    .a-sep { width: 1px; height: 20px; background: var(--border); }
+
+    /* ─── SECTION COMMONS ─── */
+    section { padding: 7rem 3rem; }
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    .label-tag {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .label-tag::before { content: ''; width: 22px; height: 1px; background: var(--accent); opacity: 0.7; }
+
+    .big-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 5.5vw, 5.5rem);
+      letter-spacing: 0.02em;
+      line-height: 0.95;
+      color: var(--white);
+    }
+
+    /* ─── ABOUT ─── */
+    .about { background: var(--black); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 8rem;
+      align-items: start;
+      margin-top: 5rem;
+    }
+
+    .about-big-letter {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 11rem;
+      line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(200,169,110,0.55);
+      margin-bottom: -2rem;
+      user-select: none;
+    }
+
+    .about-pull {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: 1.3rem;
+      color: var(--dim);
+      line-height: 1.65;
+    }
+
+    .body-text {
+      font-size: 0.97rem;
+      color: rgba(245,242,238,0.6);
+      line-height: 1.9;
+      margin-bottom: 1.4rem;
+    }
+
+    .body-text strong { color: var(--white); font-weight: 500; }
+
+    .img-block {
+      margin-top: 2.5rem;
+      border: 1px solid var(--accent-border);
+      background: var(--accent-dim);
+      padding: 1.4rem 1.6rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      border-radius: 3px;
+    }
+
+    .img-block-icon { font-size: 1.5rem; margin-top: 2px; }
+
+    .img-block-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+
+    .img-block-title { font-size: 0.92rem; font-weight: 500; color: var(--white); margin-bottom: 0.3rem; }
+    .img-block-desc { font-size: 0.8rem; color: var(--dim); line-height: 1.55; }
+
+    /* ─── SKILLS ─── */
+    .skills-strip {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 5.5rem 3rem;
+    }
+
+    .skills-header { margin-bottom: 4rem; }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--border);
+    }
+
+    .skill-cell {
+      padding: 2rem 2.2rem;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      transition: background 0.25s;
+    }
+
+    .skill-cell:nth-child(3n) { border-right: none; }
+    .skill-cell:nth-child(n+4) { border-bottom: none; }
+    .skill-cell:hover { background: rgba(200,169,110,0.04); }
+
+    .skill-cell::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 1px;
+      background: var(--accent);
+      transition: width 0.4s ease;
+    }
+
+    .skill-cell:hover::after { width: 100%; }
+
+    .skill-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.8rem;
+      line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(200,169,110,0.6);
+      margin-bottom: 0.8rem;
+    }
+
+    .skill-name {
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-desc { font-size: 0.9rem; color: var(--dim); line-height: 1.6; }
+
+    /* ─── LESSONS ─── */
+    .lessons { background: var(--black); }
+
+    .lessons-table {
+      margin-top: 4rem;
+      border: 1px solid var(--border);
+    }
+
+    .lesson-row {
+      display: grid;
+      grid-template-columns: 56px 1fr 1fr 120px;
+      background: var(--black);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+
+    .lesson-row:last-child { border-bottom: none; }
+    .lesson-row:hover { background: var(--surface); }
+
+    .lesson-row > * { padding: 2rem 1.8rem; border-right: 1px solid var(--border); }
+    .lesson-row > *:last-child { border-right: none; }
+
+    .l-index {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 0.9rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .l-name h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+    }
+
+    .l-name p { font-size: 0.82rem; color: var(--dim); line-height: 1.55; max-width: 300px; }
+
+    .l-features { display: flex; flex-direction: column; justify-content: center; gap: 0.45rem; }
+
+    .l-features span {
+      font-size: 0.88rem;
+      color: var(--dim);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .l-features span::before {
+      content: '';
+      width: 3px; height: 3px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .l-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .badge {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent-border);
+      padding: 0.45rem 0.9rem;
+      border-radius: 2px;
+      background: var(--accent-dim);
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    /* ─── CTA ─── */
+    .cta-section {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 9rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: 'TENNIS';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28vw;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(200,169,110,0.035);
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .cta-inner { position: relative; z-index: 1; }
+
+    .cta-title { margin-bottom: 1.2rem; }
+    .cta-title .ghost {
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(245,242,238,0.25);
+    }
+
+    .cta-sub {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--dim);
+      margin-bottom: 3.5rem;
+    }
+
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--accent);
+      color: var(--black);
+      text-decoration: none;
+      padding: 0.95rem 2.2rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+
+    .btn-gold:hover { background: #d9bc80; transform: translateY(-2px); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: transparent;
+      color: var(--white);
+      text-decoration: none;
+      padding: 0.95rem 2.2rem;
+      font-size: 0.88rem;
+      font-weight: 300;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+
+    .btn-outline:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-2px); }
+
+    .cta-footnote {
+      margin-top: 2.5rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: rgba(245,242,238,0.25);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--black);
+      border-top: 1px solid var(--border);
+      padding: 1.8rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .f-logo { font-family: 'Bebas Neue', sans-serif; font-size: 0.95rem; letter-spacing: 0.12em; color: rgba(245,242,238,0.3); }
+    .f-logo span { color: var(--accent); opacity: 0.6; }
+
+    .f-links { display: flex; gap: 2rem; }
+
+    .f-links a {
+      font-size: 0.72rem;
+      letter-spacing: 0.07em;
+      color: rgba(245,242,238,0.28);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .f-links a:hover { color: rgba(245,242,238,0.65); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .nav-links { display: none; }
+      section { padding: 5rem 1.5rem; }
+      .hero-inner { padding: 110px 1.5rem 4rem; grid-template-columns: 1fr; }
+      .hero-illustration { display: none; }
+      .hero-sub-row { flex-direction: column; align-items: flex-start; }
+      .hero-contacts { align-items: flex-start; }
+      .hero-scroll-bar { padding: 1.5rem 1.5rem; }
+      .academy-band { padding: 1rem 1.5rem; gap: 1rem; }
+      .a-sep { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-big-letter { font-size: 7rem; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .skill-cell:nth-child(3n) { border-right: 1px solid var(--border); }
+      .skill-cell:nth-child(2n) { border-right: none; }
+      .skill-cell:nth-child(n+5) { border-bottom: none; }
+      .skill-cell:nth-child(5) { border-bottom: 1px solid var(--border); }
+      .lesson-row { grid-template-columns: 1fr; }
+      .lesson-row > * { border-right: none; border-bottom: 1px solid var(--border); }
+      .lesson-row > *:last-child { border-bottom: none; }
+      .l-index { display: none; }
+      footer { flex-direction: column; padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">Huckins <span>Tennis</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#lessons">Lessons</a></li>
+      <li><a href="#contact" class="nav-book">Book a Lesson</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <!-- Left: Text -->
+      <div class="hero-text">
+        <div class="hero-eyebrow">
+          <div class="eyebrow-line"></div>
+          <span>San Diego, CA &nbsp;·&nbsp; Private Instruction</span>
+        </div>
+        <h1 class="hero-headline">
+          Raise<br>
+          <span class="line-ghost">Your</span>
+          <span class="line-accent">Game.</span>
+        </h1>
+        <div class="hero-sub-row">
+          <p class="hero-tagline">From first serve to competitive edge — precision instruction built on a lifetime of playing and coaching at the highest level.</p>
+          <div class="hero-contacts">
+            <a href="tel:8587524321">
+              <span class="contact-dot"></span>
+              858-752-4321
+            </a>
+            <a href="mailto:Mark.huckins@gmail.com">
+              <span class="contact-dot"></span>
+              Mark.huckins@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Geometric Court Illustration -->
+      <div class="hero-illustration">
+        <svg viewBox="0 0 400 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+          <!-- Outer court rectangle -->
+          <rect class="court-draw" x="40" y="30" width="320" height="460"
+            stroke="rgba(200,169,110,0.55)" stroke-width="1.5"/>
+
+          <!-- Singles sidelines (inner vertical lines) -->
+          <line class="court-draw" x1="95" y1="30" x2="95" y2="490"
+            stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
+          <line class="court-draw" x1="305" y1="30" x2="305" y2="490"
+            stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
+
+          <!-- Net line (horizontal center) -->
+          <line class="court-draw-2" x1="40" y1="260" x2="360" y2="260"
+            stroke="rgba(200,169,110,0.7)" stroke-width="2"/>
+
+          <!-- Service boxes top -->
+          <line class="court-draw-2" x1="95" y1="140" x2="305" y2="140"
+            stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
+          <line class="court-draw-2" x1="200" y1="140" x2="200" y2="260"
+            stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
+
+          <!-- Service boxes bottom -->
+          <line class="court-draw-2" x1="95" y1="380" x2="305" y2="380"
+            stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
+          <line class="court-draw-2" x1="200" y1="260" x2="200" y2="380"
+            stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
+
+          <!-- Center service mark top -->
+          <line class="court-draw-3" x1="196" y1="30" x2="204" y2="30"
+            stroke="rgba(200,169,110,0.6)" stroke-width="2"/>
+
+          <!-- Center service mark bottom -->
+          <line class="court-draw-3" x1="196" y1="490" x2="204" y2="490"
+            stroke="rgba(200,169,110,0.6)" stroke-width="2"/>
+
+          <!-- Baseline center marks -->
+          <line class="court-draw-3" x1="200" y1="490" x2="200" y2="475"
+            stroke="rgba(200,169,110,0.5)" stroke-width="1.5"/>
+          <line class="court-draw-3" x1="200" y1="30" x2="200" y2="45"
+            stroke="rgba(200,169,110,0.5)" stroke-width="1.5"/>
+
+          <!-- Diagonal accent lines (abstract / geometric feel) -->
+          <line class="court-draw-3" x1="40" y1="30" x2="360" y2="490"
+            stroke="rgba(200,169,110,0.07)" stroke-width="1"/>
+          <line class="court-draw-3" x1="360" y1="30" x2="40" y2="490"
+            stroke="rgba(200,169,110,0.07)" stroke-width="1"/>
+
+          <!-- Net post dots -->
+          <circle class="court-fade" cx="40" cy="260" r="4"
+            fill="var(--accent)" opacity="0.7"/>
+          <circle class="court-fade" cx="360" cy="260" r="4"
+            fill="var(--accent)" opacity="0.7"/>
+
+          <!-- Corner accent squares -->
+          <rect class="court-fade" x="36" y="26" width="8" height="8"
+            fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
+          <rect class="court-fade" x="356" y="26" width="8" height="8"
+            fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
+          <rect class="court-fade" x="36" y="486" width="8" height="8"
+            fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
+          <rect class="court-fade" x="356" y="486" width="8" height="8"
+            fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
+
+          <!-- Ball (glowing dot at net center) -->
+          <circle class="court-fade" cx="200" cy="260" r="7"
+            fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.9"/>
+          <circle class="court-fade" cx="200" cy="260" r="3"
+            fill="var(--accent)" opacity="0.8"/>
+
+          <!-- Subtle glow behind ball -->
+          <circle class="court-fade" cx="200" cy="260" r="18"
+            fill="var(--accent)" opacity="0.04"/>
+
+          <!-- "NET" label -->
+          <text class="court-fade" x="200" y="252" text-anchor="middle"
+            font-family="'Bebas Neue', sans-serif" font-size="10"
+            letter-spacing="0.2em" fill="rgba(200,169,110,0.5)">NET</text>
+
+        </svg>
+      </div>
+    </div>
+    <div class="hero-scroll-bar">
+      <div class="scroll-line"></div>
+      <span class="scroll-text">Scroll</span>
+    </div>
+  </section>
+
+  <!-- ACADEMY BAND -->
+  <div class="academy-band">
+    <div class="a-item">
+      <span class="a-label">Player &amp; Coach</span>
+      <span class="a-value">IMG Academy — Bradenton, FL</span>
+    </div>
+    <div class="a-sep"></div>
+    <div class="a-item">
+      <span class="a-label">Instruction</span>
+      <span class="a-value">All Ages &amp; Skill Levels</span>
+    </div>
+    <div class="a-sep"></div>
+    <div class="a-item">
+      <span class="a-label">Availability</span>
+      <span class="a-value">Day &amp; Evening &nbsp;·&nbsp; Half-Hour Increments</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="label-tag">The Instructor</div>
+      <h2 class="big-title">Mark Huckins</h2>
+      <div class="about-grid">
+        <div>
+          <div class="about-big-letter">MH</div>
+          <p class="about-pull">"Individual attention creates the space to focus on what actually holds your game back."</p>
+        </div>
+        <div>
+          <p class="body-text">Mark Huckins brings a deep competitive foundation to every lesson. He trained at <strong>IMG Academy in Bradenton, Florida</strong> — one of the world's most prestigious tennis institutions — progressing through both junior development and college-level competitive programs before transitioning into coaching at the same facility.</p>
+          <p class="body-text">Whether you're brand new to the game looking for a fresh challenge, or an advanced tournament player seeking a competitive edge, the individual focus of private instruction will fundamentally change how you experience the sport.</p>
+          <p class="body-text">Lessons are available day or evening for those with access to a private court or open facility. Take lessons in any half-hour increment on your own schedule.</p>
+          <div class="img-block">
+            <div class="img-block-icon">🎾</div>
+            <div>
+              <div class="img-block-label">Credentials</div>
+              <div class="img-block-title">IMG Academy — Player &amp; Coach, Bradenton FL</div>
+              <div class="img-block-desc">Junior development, college training, and coaching experience at one of the world's premier tennis academies.</div>
+              <ul style="list-style:none;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.4rem;">
+                <li style="font-size:0.85rem;color:var(--white);display:flex;align-items:center;gap:0.6rem;">
+                  <span style="width:5px;height:5px;background:var(--accent);border-radius:50%;flex-shrink:0;display:inline-block;"></span>
+                  Nationally ranked junior competitor
+                </li>
+                <li style="font-size:0.85rem;color:var(--white);display:flex;align-items:center;gap:0.6rem;">
+                  <span style="width:5px;height:5px;background:var(--accent);border-radius:50%;flex-shrink:0;display:inline-block;"></span>
+                  Division I collegiate athlete
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills-strip" id="training">
+    <div class="container">
+      <div class="skills-header">
+        <div class="label-tag">What You'll Develop</div>
+        <h2 class="big-title">Key Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-cell">
+          <div class="skill-num">01</div>
+          <div class="skill-name">Technique</div>
+          <div class="skill-desc">Stroke production, timing, and court positioning refined for your specific game.</div>
+        </div>
+        <div class="skill-cell">
+          <div class="skill-num">02</div>
+          <div class="skill-name">Strategy</div>
+          <div class="skill-desc">Learn when and where to hit, identify weaknesses, and capitalize on key points.</div>
+        </div>
+        <div class="skill-cell">
+          <div class="skill-num">03</div>
+          <div class="skill-name">Shot Execution</div>
+          <div class="skill-desc">Slice, topspin, drop shots, lobs, kick serve — the advanced arsenal refined.</div>
+        </div>
+        <div class="skill-cell">
+          <div class="skill-num">04</div>
+          <div class="skill-name">Movement</div>
+          <div class="skill-desc">Body mechanics that improve power, increase endurance, and prevent injuries.</div>
+        </div>
+        <div class="skill-cell">
+          <div class="skill-num">05</div>
+          <div class="skill-name">Footwork</div>
+          <div class="skill-desc">Drills that sharpen recovery time, create explosive speed, and build match stamina.</div>
+        </div>
+        <div class="skill-cell">
+          <div class="skill-num">06</div>
+          <div class="skill-name">Fitness</div>
+          <div class="skill-desc">Court-specific conditioning designed to improve recovery and overall performance.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LESSONS -->
+  <section class="lessons" id="lessons">
+    <div class="container">
+      <div class="label-tag">Lesson Formats</div>
+      <h2 class="big-title">How We Work</h2>
+      <div class="lessons-table">
+
+        <div class="lesson-row">
+          <div class="l-index">01</div>
+          <div class="l-name">
+            <h3>Private Lessons</h3>
+            <p>One-on-one instruction for all ages and levels with complete focus on your specific goals and areas for improvement.</p>
+          </div>
+          <div class="l-features">
+            <span>All skill levels and ages welcome</span>
+            <span>Complete individual focus</span>
+            <span>Target any aspect of your game</span>
+            <span>Half-hour increments, day or evening</span>
+          </div>
+          <div class="l-badge">
+            <span class="badge">Most Popular</span>
+          </div>
+        </div>
+
+        <div class="lesson-row">
+          <div class="l-index">02</div>
+          <div class="l-name">
+            <h3>Group Instruction</h3>
+            <p>Available for up to four players. Match play situations or high-intensity cardio and footwork drills for all levels.</p>
+          </div>
+          <div class="l-features">
+            <span>Up to 4 participants</span>
+            <span>Match play or drill formats</span>
+            <span>Great for friends and family</span>
+            <span>Social, competitive atmosphere</span>
+          </div>
+          <div class="l-badge">
+            <span class="badge">Up to 4 Players</span>
+          </div>
+        </div>
+
+        <div class="lesson-row">
+          <div class="l-index">03</div>
+          <div class="l-name">
+            <h3>Adult Clinics</h3>
+            <p>Skill-level specific clinics for adults. Schedule and availability vary — reach out for current offerings.</p>
+          </div>
+          <div class="l-features">
+            <span>Adult-focused programming</span>
+            <span>Grouped by skill level</span>
+            <span>High-energy structured sessions</span>
+            <span>Call or email for current schedule</span>
+          </div>
+          <div class="l-badge">
+            <span class="badge">By Availability</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <div class="cta-inner">
+      <div class="label-tag" style="justify-content:center;">Book a Lesson</div>
+      <h2 class="big-title cta-title">Ready to <span class="ghost">Start?</span></h2>
+      <p class="cta-sub">Call or email — day and evening slots available across San Diego.</p>
+      <div class="cta-btns">
+        <a href="tel:8587524321" class="btn-gold">📞 &nbsp;858-752-4321</a>
+        <a href="mailto:Mark.huckins@gmail.com" class="btn-outline">✉️ &nbsp;Mark.huckins@gmail.com</a>
+      </div>
+      <p class="cta
