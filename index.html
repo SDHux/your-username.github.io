@@ -1723,67 +1723,67 @@
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // ── File handling ──
-    // Tracks whichever input was last used (desktop, camera, or library)
-    let selectedFile = null;
+    // Explicitly on window so Cloudflare script injection doesn't break scope
+    window.window.selectedFile = null;
 
-    function handleFileSelect(e) {
+    window.handleFileSelect = function(e) {
       const f = e.target.files[0];
       if (f) {
-        selectedFile = f;
+        window.selectedFile = f;
         showSelected(f);
       }
     }
 
-    function handleDragOver(e) {
+    window.handleDragOver = function(e) {
       e.preventDefault();
       document.getElementById('dropZone').classList.add('dragover');
     }
 
-    function handleDragLeave() {
+    window.handleDragLeave = function() {
       document.getElementById('dropZone').classList.remove('dragover');
     }
 
-    function handleDrop(e) {
+    window.handleDrop = function(e) {
       e.preventDefault();
       document.getElementById('dropZone').classList.remove('dragover');
       const f = e.dataTransfer.files[0];
       if (f && f.type.startsWith('video/')) {
-        selectedFile = f;
+        window.selectedFile = f;
         showSelected(f);
       }
     }
 
-    function showSelected(f) {
+    window.showSelected = function(f) {
       const el = document.getElementById('dropSelected');
       el.textContent = '✓ ' + f.name + ' (' + (f.size/1024/1024).toFixed(1) + ' MB)';
       el.style.display = 'block';
     }
 
     // ── Loading steps ──
-    let stepTimer = null, stepIdx = 0;
+    window.stepTimer = null; window.window.stepIdx = 0;
 
-    function startSteps() {
+    window.startSteps = function() {
       const ids = ['an1','an2','an3','an4'];
-      stepIdx = 0;
+      window.stepIdx = 0;
       ids.forEach(id => document.getElementById(id).className = 'an-step');
       document.getElementById('an1').classList.add('active');
-      stepTimer = setInterval(() => {
-        if (stepIdx < ids.length - 1) {
-          document.getElementById(ids[stepIdx]).className = 'an-step done';
-          stepIdx++;
-          document.getElementById(ids[stepIdx]).className = 'an-step active';
+      window.stepTimer = setInterval(() => {
+        if (window.stepIdx < ids.length - 1) {
+          document.getElementById(ids[window.stepIdx]).className = 'an-step done';
+          window.stepIdx++;
+          document.getElementById(ids[window.stepIdx]).className = 'an-step active';
         }
       }, 2800);
     }
 
-    function stopSteps() { if (stepTimer) clearInterval(stepTimer); }
+    window.stopSteps = function() { if (window.stepTimer) clearInterval(window.stepTimer); }
 
     // ── Submit ──
-    async function submitAnalysis(e) {
+    async window.submitAnalysis = function(e) {
       e.preventDefault();
 
       // Works whether they used desktop drag-drop, camera, or photo library
-      const vid = selectedFile || document.getElementById('videoFile').files[0];
+      const vid = window.selectedFile || document.getElementById('videoFile').files[0];
       if (!vid) { alert('Please select or record a video first.'); return; }
 
       document.getElementById('anLoading').classList.add('active');
@@ -1800,7 +1800,7 @@
         fd.append('concerns', document.getElementById('concerns').value);
 
         // Replace '/api/analyze' with your deployed backend URL
-        const res = await fetch('https://your-usernamegithubio-production.up.railway.app/api/analyze', { method: 'POST', body: fd });
+        const res = await fetch('/api/analyze', { method: 'POST', body: fd });
         if (!res.ok) {
           const err = await res.json();
           throw new Error(err.error || 'Analysis failed. Please try again.');
@@ -1820,7 +1820,7 @@
     }
 
     // ── Results ──
-    function showResults(result) {
+    window.showResults = function(result) {
       document.getElementById('analysisFormWrap').style.display = 'none';
       const name = result.student_name || 'Your';
       const stroke = (result.stroke_type || 'stroke').replace(/_/g,' ');
@@ -1834,7 +1834,7 @@
       panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    function renderMd(text) {
+    window.renderMd = function(text) {
       if (!text) return '<p>No analysis available.</p>';
       return text
         .replace(/^## (.+)$/gm, '<h2>$1</h2>')
@@ -1852,8 +1852,8 @@
         .join('\n');
     }
 
-    function resetAnalysis() {
-      selectedFile = null;
+    window.resetAnalysis = function() {
+      window.selectedFile = null;
       document.getElementById('analysisFormWrap').style.display = 'block';
       document.getElementById('anResults').classList.remove('visible');
       document.getElementById('analysisForm').reset();
