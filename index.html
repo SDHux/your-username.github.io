@@ -1722,117 +1722,111 @@
   </footer>
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // ── File handling ──
-    // Explicitly on window so Cloudflare script injection doesn't break scope
+    // All functions on window scope to prevent Cloudflare script injection conflicts
+
     window.selectedFile = null;
+    window.stepTimer = null;
+    window.stepIdx = 0;
 
     window.handleFileSelect = function(e) {
-      const f = e.target.files[0];
+      var f = e.target.files[0];
       if (f) {
         window.selectedFile = f;
-        showSelected(f);
+        window.showSelected(f);
       }
-    }
+    };
 
     window.handleDragOver = function(e) {
       e.preventDefault();
       document.getElementById('dropZone').classList.add('dragover');
-    }
+    };
 
     window.handleDragLeave = function() {
       document.getElementById('dropZone').classList.remove('dragover');
-    }
+    };
 
     window.handleDrop = function(e) {
       e.preventDefault();
       document.getElementById('dropZone').classList.remove('dragover');
-      const f = e.dataTransfer.files[0];
+      var f = e.dataTransfer.files[0];
       if (f && f.type.startsWith('video/')) {
         window.selectedFile = f;
-        showSelected(f);
+        window.showSelected(f);
       }
-    }
+    };
 
     window.showSelected = function(f) {
-      const el = document.getElementById('dropSelected');
-      el.textContent = '✓ ' + f.name + ' (' + (f.size/1024/1024).toFixed(1) + ' MB)';
+      var el = document.getElementById('dropSelected');
+      el.textContent = '\u2713 ' + f.name + ' (' + (f.size/1024/1024).toFixed(1) + ' MB)';
       el.style.display = 'block';
-    }
-
-    // ── Loading steps ──
-    window.stepTimer = null; window.window.stepIdx = 0;
+    };
 
     window.startSteps = function() {
-      const ids = ['an1','an2','an3','an4'];
+      var ids = ['an1','an2','an3','an4'];
       window.stepIdx = 0;
-      ids.forEach(id => document.getElementById(id).className = 'an-step');
+      ids.forEach(function(id) { document.getElementById(id).className = 'an-step'; });
       document.getElementById('an1').classList.add('active');
-      window.stepTimer = setInterval(() => {
+      window.stepTimer = setInterval(function() {
         if (window.stepIdx < ids.length - 1) {
           document.getElementById(ids[window.stepIdx]).className = 'an-step done';
           window.stepIdx++;
           document.getElementById(ids[window.stepIdx]).className = 'an-step active';
         }
       }, 2800);
-    }
+    };
 
-    window.stopSteps = function() { if (window.stepTimer) clearInterval(window.stepTimer); }
+    window.stopSteps = function() {
+      if (window.stepTimer) clearInterval(window.stepTimer);
+    };
 
-    // ── Submit ──
-    async window.submitAnalysis = function(e) {
+    window.submitAnalysis = function(e) {
       e.preventDefault();
-
-      // Works whether they used desktop drag-drop, camera, or photo library
-      const vid = window.selectedFile || document.getElementById('videoFile').files[0];
+      var vid = window.selectedFile || document.getElementById('videoFile').files[0];
       if (!vid) { alert('Please select or record a video first.'); return; }
 
       document.getElementById('anLoading').classList.add('active');
       document.getElementById('analyzeBtn').disabled = true;
-      startSteps();
+      window.startSteps();
 
-      try {
-        const fd = new FormData();
-        fd.append('video', vid);
-        fd.append('stroke_type', document.getElementById('strokeType').value);
-        fd.append('name', document.getElementById('studentName').value);
-        fd.append('age', document.getElementById('studentAge').value);
-        fd.append('level', document.getElementById('playerLevel').value);
-        fd.append('concerns', document.getElementById('concerns').value);
+      var fd = new FormData();
+      fd.append('video', vid);
+      fd.append('stroke_type', document.getElementById('strokeType').value);
+      fd.append('name', document.getElementById('studentName').value);
+      fd.append('age', document.getElementById('studentAge').value);
+      fd.append('level', document.getElementById('playerLevel').value);
+      fd.append('concerns', document.getElementById('concerns').value);
 
-        // Replace '/api/analyze' with your deployed backend URL
-        const res = await fetch('/api/analyze', { method: 'POST', body: fd });
-        if (!res.ok) {
-          const err = await res.json();
-          throw new Error(err.error || 'Analysis failed. Please try again.');
-        }
-        const result = await res.json();
+      fetch('https://your-usernamegithubio-production.up.railway.app/api/analyze', { method: 'POST', body: fd })
+        .then(function(res) {
+          if (!res.ok) {
+            return res.json().then(function(err) { throw new Error(err.error || 'Analysis failed. Please try again.'); });
+          }
+          return res.json();
+        })
+        .then(function(result) {
+          window.stopSteps();
+          document.getElementById('anLoading').classList.remove('active');
+          window.showResults(result);
+        })
+        .catch(function(err) {
+          window.stopSteps();
+          document.getElementById('anLoading').classList.remove('active');
+          document.getElementById('analyzeBtn').disabled = false;
+          alert(err.message || 'Something went wrong. Please try again.');
+        });
+    };
 
-        stopSteps();
-        document.getElementById('anLoading').classList.remove('active');
-        showResults(result);
-
-      } catch (err) {
-        stopSteps();
-        document.getElementById('anLoading').classList.remove('active');
-        document.getElementById('analyzeBtn').disabled = false;
-        alert(err.message || 'Something went wrong. Please try again.');
-      }
-    }
-
-    // ── Results ──
     window.showResults = function(result) {
       document.getElementById('analysisFormWrap').style.display = 'none';
-      const name = result.student_name || 'Your';
-      const stroke = (result.stroke_type || 'stroke').replace(/_/g,' ');
+      var name = result.student_name || 'Your';
+      var stroke = (result.stroke_type || 'stroke').replace(/_/g, ' ');
       document.getElementById('anResultsTitle').textContent = name + "'s Analysis";
-      document.getElementById('anResultsMeta').textContent =
-        stroke.charAt(0).toUpperCase() + stroke.slice(1) +
-        ' · ' + result.frames_analyzed + ' frames analyzed';
-      document.getElementById('analysisOutput').innerHTML = renderMd(result.analysis);
-      const panel = document.getElementById('anResults');
+      document.getElementById('anResultsMeta').textContent = stroke.charAt(0).toUpperCase() + stroke.slice(1) + ' · ' + result.frames_analyzed + ' frames analyzed';
+      document.getElementById('analysisOutput').innerHTML = window.renderMd(result.analysis);
+      var panel = document.getElementById('anResults');
       panel.classList.add('visible');
       panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    };
 
     window.renderMd = function(text) {
       if (!text) return '<p>No analysis available.</p>';
@@ -1843,14 +1837,14 @@
         .replace(/\*(.+?)\*/g, '<em>$1</em>')
         .replace(/^---$/gm, '<hr/>')
         .replace(/^- (.+)$/gm, '<li>$1</li>')
-        .replace(/(<li>.*<\/li>\n?)+/g, m => '<ul>' + m + '</ul>')
+        .replace(/(<li>.*<\/li>\n?)+/g, function(m) { return '<ul>' + m + '</ul>'; })
         .split(/\n\n+/)
-        .map(b => {
+        .map(function(b) {
           if (/^<(h[23]|ul|hr|li)/.test(b)) return b;
-          return '<p>' + b.replace(/\n/g,' ') + '</p>';
+          return '<p>' + b.replace(/\n/g, ' ') + '</p>';
         })
         .join('\n');
-    }
+    };
 
     window.resetAnalysis = function() {
       window.selectedFile = null;
@@ -1858,4 +1852,10 @@
       document.getElementById('anResults').classList.remove('visible');
       document.getElementById('analysisForm').reset();
       document.getElementById('dropSelected').style.display = 'none';
-      document.getElementById('an
+      document.getElementById('analyzeBtn').disabled = false;
+      document.getElementById('analysisFormWrap').scrollIntoView({ behavior: 'smooth' });
+    };
+  </script>
+
+</body>
+</html>
