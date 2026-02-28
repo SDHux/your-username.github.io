@@ -1800,7 +1800,7 @@
         fd.append('concerns', document.getElementById('concerns').value);
 
         // Replace '/api/analyze' with your deployed backend URL
-        const res = await fetch('/api/analyze', { method: 'POST', body: fd });
+        const res = await fetch('https://your-usernamegithubio-production.up.railway.app/api/analyze', { method: 'POST', body: fd });
         if (!res.ok) {
           const err = await res.json();
           throw new Error(err.error || 'Analysis failed. Please try again.');
