@@ -3,57 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mark Huckins — Tennis Lessons San Diego | Private Instruction</title>
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Professional tennis instruction in San Diego by Mark Huckins — IMG Academy trained player and coach. Private lessons, group instruction, and adult clinics for all ages and skill levels. Day and evening availability." />
-  <meta name="keywords" content="tennis lessons San Diego, private tennis instruction San Diego, tennis coach San Diego, tennis lessons near me, adult tennis lessons San Diego, junior tennis lessons San Diego, group tennis lessons San Diego, IMG Academy tennis, San Diego tennis instructor, tennis clinics San Diego" />
-  <meta name="author" content="Mark Huckins" />
+  <title>San Diego Tennis — Find Courts, Pros & Lessons</title>
+  <meta name="description" content="San Diego's tennis resource. Find certified teaching pros, public courts, and private lessons across San Diego county. AI stroke analysis available." />
+  <meta name="keywords" content="tennis lessons San Diego, tennis courts San Diego, tennis coach San Diego, San Diego tennis directory, find tennis pro San Diego" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.sdtennislessons.com/" />
-
-  <!-- Open Graph (for social sharing previews) -->
-  <meta property="og:title" content="Mark Huckins — Tennis Lessons San Diego" />
-  <meta property="og:description" content="IMG Academy trained player and coach offering private tennis lessons, group instruction, and clinics in San Diego. All ages and skill levels welcome." />
+  <meta property="og:title" content="San Diego Tennis — Courts, Pros & Lessons" />
+  <meta property="og:description" content="Find certified teaching pros, public courts, and private lessons across San Diego county." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.sdtennislessons.com/" />
-  <meta property="og:site_name" content="SD Tennis Lessons" />
-
-  <!-- Local Business Schema (helps Google understand your business) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Mark Huckins Tennis Instruction",
-    "description": "Professional tennis instruction for all ages and skill levels in San Diego. Private lessons, group instruction, and adult clinics.",
+    "name": "San Diego Tennis",
+    "description": "San Diego tennis directory — courts, certified pros, and private instruction.",
     "url": "https://www.sdtennislessons.com",
     "telephone": "+1-858-752-4321",
-    "email": "Mark.huckins@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "San Diego",
-      "addressRegion": "CA",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 32.7157,
-      "longitude": -117.1611
-    },
-    "areaServed": "San Diego, CA",
-    "priceRange": "$$",
-    "openingHours": "Mo-Su 07:00-21:00",
-    "sameAs": []
+    "address": { "@type": "PostalAddress", "addressLocality": "San Diego", "addressRegion": "CA", "addressCountry": "US" },
+    "areaServed": "San Diego, CA"
   }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --black: #080808;
-      --off-black: #111010;
       --surface: #161514;
+      --surface2: #1e1c1b;
       --border: rgba(255,255,255,0.08);
       --white: #f5f2ee;
       --dim: rgba(245,242,238,0.45);
@@ -61,1151 +38,329 @@
       --accent-dim: rgba(200,169,110,0.1);
       --accent-border: rgba(200,169,110,0.3);
     }
-
     html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--white); font-family: 'DM Sans', sans-serif; font-weight: 300; overflow-x: hidden; }
 
-    body {
-      background: var(--black);
-      color: var(--white);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 300;
-      overflow-x: hidden;
-    }
-
-    /* ─── NAV ─── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.5rem 3rem;
-    }
-
-    nav::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(8,8,8,0.95) 0%, transparent 100%);
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    .nav-logo {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.4rem;
-      letter-spacing: 0.12em;
-      color: var(--white);
-    }
-
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 3rem; }
+    nav::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(8,8,8,0.96) 0%, transparent 100%); z-index: -1; pointer-events: none; }
+    .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.12em; color: var(--white); text-decoration: none; }
     .nav-logo span { color: var(--accent); }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2.5rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 400;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--dim);
-      transition: color 0.2s;
-    }
-
+    .nav-pb { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 0.55em; color: var(--accent); letter-spacing: 0.04em; margin-left: 0.4em; opacity: 0.8; vertical-align: middle; font-weight: 400; -webkit-text-stroke: 0; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { text-decoration: none; font-size: 0.82rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dim); transition: color 0.2s; }
     .nav-links a:hover { color: var(--white); }
-
-    .nav-book {
-      color: var(--accent) !important;
-      border: 1px solid var(--accent-border) !important;
-      padding: 0.55rem 1.4rem;
-      border-radius: 2px;
-      font-size: 0.85rem !important;
-      transition: background 0.2s !important;
-    }
-
+    .nav-book { color: var(--accent) !important; border: 1px solid var(--accent-border) !important; padding: 0.5rem 1.2rem; border-radius: 2px; }
     .nav-book:hover { background: var(--accent-dim) !important; }
 
-    /* ─── HERO ─── */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -10%; right: -5%;
-      width: 55vw; height: 130vh;
-      background: linear-gradient(135deg, transparent 48%, rgba(200,169,110,0.04) 49%, rgba(200,169,110,0.06) 51%, transparent 52%);
-      transform: rotate(-8deg);
-      pointer-events: none;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 60vw; height: 60vh;
-      background: radial-gradient(ellipse at 20% 100%, rgba(200,169,110,0.07) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    .hero-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 1400px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 120px 3rem 5rem;
-      display: grid;
-      grid-template-columns: 1fr 400px;
-      gap: 4rem;
-      align-items: end;
-    }
-
+    /* HERO */
+    .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -10%; right: -5%; width: 55vw; height: 130vh; background: linear-gradient(135deg, transparent 48%, rgba(200,169,110,0.04) 49%, rgba(200,169,110,0.06) 51%, transparent 52%); transform: rotate(-8deg); pointer-events: none; }
+    .hero::after { content: ''; position: absolute; bottom: 0; left: 0; width: 60vw; height: 60vh; background: radial-gradient(ellipse at 20% 100%, rgba(200,169,110,0.06) 0%, transparent 60%); pointer-events: none; }
+    .hero-inner { position: relative; z-index: 2; max-width: 1400px; width: 100%; margin: 0 auto; padding: 120px 3rem 5rem; display: grid; grid-template-columns: 1fr 400px; gap: 4rem; align-items: end; }
     .hero-text { display: flex; flex-direction: column; }
+    .hero-eyebrow { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.8s 0.2s forwards; }
+    .hero-eyebrow span { font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); }
+    .eyebrow-line { width: 36px; height: 1px; background: var(--accent); opacity: 0.6; }
+    .hero-headline { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5rem, 14vw, 15rem); line-height: 0.88; letter-spacing: -0.01em; opacity: 0; animation: fadeUp 0.9s 0.35s forwards; }
+    .hero-headline .line-ghost { color: transparent; -webkit-text-stroke: 1px rgba(245,242,238,0.2); display: block; }
+    .hero-headline .line-accent { color: var(--accent); display: block; }
+    .hero-sub-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 3rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); opacity: 0; animation: fadeUp 0.8s 0.6s forwards; }
+    .hero-tagline { font-family: 'DM Serif Display', serif; font-style: italic; font-size: clamp(0.9rem, 1.4vw, 1.15rem); color: var(--dim); max-width: 420px; line-height: 1.65; }
+    .hero-stats { display: flex; gap: 3rem; }
+    .hero-stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; color: var(--accent); line-height: 1; }
+    .hero-stat-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim); margin-top: 0.2rem; }
 
-    .hero-illustration {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-bottom: 2rem;
-      opacity: 0;
-      animation: fadeUp 1s 0.7s forwards;
+    .pb-tag {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: 0.19em;
+      color: var(--accent);
+      -webkit-text-stroke: 0;
+      letter-spacing: 0.06em;
+      position: absolute;
+      right: 8%;
+      bottom: -0.5em;
+      transform: rotate(-4deg);
+      transform-origin: right center;
+      opacity: 0.85;
+      white-space: nowrap;
+      font-weight: 400;
     }
 
-    .hero-illustration svg {
-      width: 100%;
-      height: auto;
-    }
-
-    .court-draw {
-      stroke-dasharray: 1200;
-      stroke-dashoffset: 1200;
-      animation: drawLine 2.5s 1s ease forwards;
-    }
-
-    .court-draw-2 {
-      stroke-dasharray: 900;
-      stroke-dashoffset: 900;
-      animation: drawLine 2s 1.4s ease forwards;
-    }
-
-    .court-draw-3 {
-      stroke-dasharray: 600;
-      stroke-dashoffset: 600;
-      animation: drawLine 1.6s 1.8s ease forwards;
-    }
-
-    .court-fade {
-      opacity: 0;
-      animation: fadeIn 0.8s 2.4s forwards;
-    }
-
+    .hero-illustration { position: relative; display: flex; align-items: center; justify-content: center; padding-bottom: 2rem; opacity: 0; animation: fadeUp 1s 0.7s forwards; }
+    .hero-illustration svg { width: 100%; height: auto; }
+    .court-draw { stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: drawLine 2.5s 1s ease forwards; }
+    .court-draw-2 { stroke-dasharray: 900; stroke-dashoffset: 900; animation: drawLine 2s 1.4s ease forwards; }
+    .court-draw-3 { stroke-dasharray: 600; stroke-dashoffset: 600; animation: drawLine 1.6s 1.8s ease forwards; }
+    .court-fade { opacity: 0; animation: fadeIn 0.8s 2.4s forwards; }
     @keyframes drawLine { to { stroke-dashoffset: 0; } }
     @keyframes fadeIn { to { opacity: 1; } }
-
-    .hero-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      opacity: 0;
-      animation: fadeUp 0.8s 0.2s forwards;
-    }
-
-    .hero-eyebrow span {
-      font-size: 0.82rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-
-    .eyebrow-line { width: 36px; height: 1px; background: var(--accent); opacity: 0.6; }
-
-    .hero-headline {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(5.5rem, 15vw, 17rem);
-      line-height: 0.88;
-      letter-spacing: -0.01em;
-      opacity: 0;
-      animation: fadeUp 0.9s 0.35s forwards;
-    }
-
-    .hero-headline .line-ghost {
-      color: transparent;
-      -webkit-text-stroke: 1px rgba(245,242,238,0.2);
-      display: block;
-    }
-
-    .hero-headline .line-accent { color: var(--accent); display: block; }
-
-    .hero-sub-row {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 3rem;
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-      opacity: 0;
-      animation: fadeUp 0.8s 0.6s forwards;
-    }
-
-    .hero-tagline {
-      font-family: 'DM Serif Display', serif;
-      font-style: italic;
-      font-size: clamp(0.95rem, 1.5vw, 1.25rem);
-      color: var(--dim);
-      max-width: 400px;
-      line-height: 1.6;
-    }
-
-    .hero-contacts {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0.55rem;
-    }
-
-    .hero-contacts a {
-      text-decoration: none;
-      font-size: 1rem;
-      letter-spacing: 0.07em;
-      color: rgba(245,242,238,0.8);
-      transition: color 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .hero-contacts a:hover { color: var(--white); }
-
-    .contact-dot { width: 4px; height: 4px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
-
-    .hero-scroll-bar {
-      position: relative;
-      z-index: 2;
-      padding: 1.8rem 3rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      opacity: 0;
-      animation: fadeUp 0.8s 0.9s forwards;
-    }
-
-    .scroll-line { width: 40px; height: 1px; background: var(--border); position: relative; overflow: hidden; }
-    .scroll-line::after {
-      content: '';
-      position: absolute; top: 0; left: -100%;
-      width: 100%; height: 100%;
-      background: var(--accent);
-      animation: slide 2s 1.5s infinite;
-    }
-
-    @keyframes slide { from { left: -100%; } to { left: 100%; } }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-
+    .hero-scroll-bar { position: relative; z-index: 2; padding: 1.8rem 3rem; display: flex; align-items: center; gap: 0.75rem; opacity: 0; animation: fadeUp 0.8s 0.9s forwards; }
+    .scroll-line { width: 40px; height: 1px; background: var(--border); position: relative; overflow: hidden; }
+    .scroll-line::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: var(--accent); animation: slide 2s 1.5s infinite; }
+    @keyframes slide { from { left: -100%; } to { left: 100%; } }
     .scroll-text { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim); }
 
-    /* ─── ACADEMY BAND ─── */
-    .academy-band {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 1.2rem 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2.5rem;
-      flex-wrap: wrap;
-    }
+    /* BAND */
+    .band { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 1.1rem 3rem; display: flex; align-items: center; justify-content: center; gap: 2.5rem; flex-wrap: wrap; }
+    .b-item { display: flex; align-items: center; gap: 0.6rem; }
+    .b-label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+    .b-value { font-size: 0.82rem; color: var(--dim); }
+    .b-sep { width: 1px; height: 18px; background: var(--border); }
 
-    .a-item { display: flex; align-items: center; gap: 0.6rem; }
-    .a-label { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
-    .a-value { font-size: 0.85rem; letter-spacing: 0.05em; color: var(--dim); }
-    .a-sep { width: 1px; height: 20px; background: var(--border); }
-
-    /* ─── SECTION COMMONS ─── */
+    /* COMMONS */
     section { padding: 7rem 3rem; }
     .container { max-width: 1200px; margin: 0 auto; }
-
-    .label-tag {
-      font-size: 0.78rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 500;
-      margin-bottom: 1.2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
+    .label-tag { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.75rem; }
     .label-tag::before { content: ''; width: 22px; height: 1px; background: var(--accent); opacity: 0.7; }
-
-    .big-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(3rem, 5.5vw, 5.5rem);
-      letter-spacing: 0.02em;
-      line-height: 0.95;
-      color: var(--white);
-    }
-
-    /* ─── ABOUT ─── */
-    .about { background: var(--black); }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 8rem;
-      align-items: start;
-      margin-top: 5rem;
-    }
-
-    .about-big-letter {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 11rem;
-      line-height: 1;
-      color: transparent;
-      -webkit-text-stroke: 1px rgba(200,169,110,0.55);
-      margin-bottom: -2rem;
-      user-select: none;
-    }
-
-    .about-pull {
-      font-family: 'DM Serif Display', serif;
-      font-style: italic;
-      font-size: 1.3rem;
-      color: var(--dim);
-      line-height: 1.65;
-    }
-
-    .body-text {
-      font-size: 0.97rem;
-      color: rgba(245,242,238,0.6);
-      line-height: 1.9;
-      margin-bottom: 1.4rem;
-    }
-
+    .big-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 5.5vw, 5.5rem); letter-spacing: 0.02em; line-height: 0.95; color: var(--white); }
+    .body-text { font-size: 0.97rem; color: rgba(245,242,238,0.6); line-height: 1.9; margin-bottom: 1.4rem; }
     .body-text strong { color: var(--white); font-weight: 500; }
 
-    .img-block {
-      margin-top: 2.5rem;
-      border: 1px solid var(--accent-border);
-      background: var(--accent-dim);
-      padding: 1.4rem 1.6rem;
-      display: flex;
-      gap: 1.2rem;
-      align-items: flex-start;
-      border-radius: 3px;
-    }
+    /* FEATURED PRO */
+    .featured-pro { background: var(--black); }
+    .featured-pro-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 8rem; align-items: start; margin-top: 5rem; }
+    .pro-monogram { font-family: 'Bebas Neue', sans-serif; font-size: 11rem; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(200,169,110,0.55); margin-bottom: -2rem; user-select: none; }
+    .pro-pull { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 1.25rem; color: var(--dim); line-height: 1.65; margin-top: 1rem; }
+    .pro-badge { margin-top: 2rem; border: 1px solid var(--accent-border); background: var(--accent-dim); padding: 1.4rem 1.6rem; display: flex; gap: 1.2rem; align-items: flex-start; border-radius: 3px; }
+    .pro-badge-icon { font-size: 1.4rem; margin-top: 2px; }
+    .pro-badge-label { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.25rem; }
+    .pro-badge-title { font-size: 0.9rem; font-weight: 500; color: var(--white); margin-bottom: 0.3rem; }
+    .pro-badge-desc { font-size: 0.78rem; color: var(--dim); line-height: 1.55; }
+    .pro-creds { list-style: none; margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.4rem; }
+    .pro-creds li { font-size: 0.83rem; color: var(--white); display: flex; align-items: center; gap: 0.6rem; }
+    .pro-creds li::before { content: ''; width: 5px; height: 5px; background: var(--accent); border-radius: 50%; flex-shrink: 0; display: inline-block; }
+    .pro-contact-row { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
+    .btn-gold { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--accent); color: var(--black); text-decoration: none; padding: 0.85rem 1.8rem; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 2px; transition: all 0.2s; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; }
+    .btn-gold:hover { background: #d9bc80; transform: translateY(-1px); }
+    .btn-outline { display: inline-flex; align-items: center; gap: 0.6rem; background: transparent; color: var(--white); text-decoration: none; padding: 0.85rem 1.8rem; font-size: 0.85rem; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid var(--border); border-radius: 2px; transition: all 0.2s; }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-1px); }
 
-    .img-block-icon { font-size: 1.5rem; margin-top: 2px; }
+    /* DIRECTOR STRIP */
+    .directory { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 7rem 3rem; }
+    .directory-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: end; margin-bottom: 4rem; }
 
-    .img-block-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.25rem;
-    }
+    /* TABS */
+    .dir-tabs { display: flex; gap: 0; border: 1px solid var(--border); margin-bottom: 3rem; }
+    .dir-tab { padding: 0.85rem 2rem; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; color: var(--dim); cursor: pointer; border-right: 1px solid var(--border); transition: all 0.2s; background: transparent; border-top: none; border-bottom: none; border-left: none; font-family: 'DM Sans', sans-serif; }
+    .dir-tab:last-child { border-right: none; }
+    .dir-tab.active { color: var(--accent); background: var(--accent-dim); }
+    .dir-tab:hover:not(.active) { color: var(--white); background: rgba(255,255,255,0.03); }
 
-    .img-block-title { font-size: 0.92rem; font-weight: 500; color: var(--white); margin-bottom: 0.3rem; }
-    .img-block-desc { font-size: 0.8rem; color: var(--dim); line-height: 1.55; }
+    /* FILTER BAR */
+    .dir-filter { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .filter-btn { padding: 0.45rem 1rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid var(--border); color: var(--dim); background: transparent; cursor: pointer; border-radius: 2px; transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
+    .filter-btn.active { border-color: var(--accent-border); color: var(--accent); background: var(--accent-dim); }
+    .filter-btn:hover:not(.active) { border-color: rgba(255,255,255,0.2); color: var(--white); }
 
-    /* ─── SKILLS ─── */
-    .skills-strip {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 5.5rem 3rem;
-    }
+    /* PRO CARDS */
+    .dir-panel { display: none; }
+    .dir-panel.active { display: block; }
+    .pros-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .pro-card { background: var(--black); padding: 2rem; transition: background 0.2s; position: relative; }
+    .pro-card:hover { background: var(--surface2); }
+    .pro-card-area { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+    .pro-card-name { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+    .pro-card-cert { font-size: 0.72rem; letter-spacing: 0.08em; color: var(--dim); margin-bottom: 0.8rem; }
+    .pro-card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+    .pro-tag { font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.25rem 0.6rem; border: 1px solid var(--border); color: var(--dim); border-radius: 1px; }
+    .pro-card-contact { font-size: 0.8rem; color: rgba(200,169,110,0.7); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
+    .pro-card-contact:hover { color: var(--accent); }
+    .pro-card-desc { font-size: 0.8rem; color: var(--dim); line-height: 1.6; margin-bottom: 1rem; }
 
-    .skills-header { margin-bottom: 4rem; }
+    /* COURTS GRID */
+    .courts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .court-card { background: var(--black); padding: 1.8rem 2rem; transition: background 0.2s; display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: start; }
+    .court-card:hover { background: var(--surface2); }
+    .court-area { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+    .court-name { font-size: 0.95rem; font-weight: 500; color: var(--white); margin-bottom: 0.25rem; }
+    .court-address { font-size: 0.78rem; color: var(--dim); margin-bottom: 0.6rem; }
+    .court-meta { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .court-pill { font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.55rem; background: var(--accent-dim); border: 1px solid var(--accent-border); color: var(--accent); border-radius: 1px; }
+    .court-pill.free { background: rgba(100,180,100,0.08); border-color: rgba(100,180,100,0.3); color: rgba(150,220,150,0.8); }
+    .court-courts { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: transparent; -webkit-text-stroke: 1px rgba(200,169,110,0.4); line-height: 1; text-align: right; }
+    .court-courts span { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim); -webkit-text-stroke: 0; }
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border: 1px solid var(--border);
-    }
-
-    .skill-cell {
-      padding: 2rem 2.2rem;
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      position: relative;
-      overflow: hidden;
-      transition: background 0.25s;
-    }
-
-    .skill-cell:nth-child(3n) { border-right: none; }
-    .skill-cell:nth-child(n+4) { border-bottom: none; }
-    .skill-cell:hover { background: rgba(200,169,110,0.04); }
-
-    .skill-cell::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 0; height: 1px;
-      background: var(--accent);
-      transition: width 0.4s ease;
-    }
-
-    .skill-cell:hover::after { width: 100%; }
-
-    .skill-num {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2.8rem;
-      line-height: 1;
-      color: transparent;
-      -webkit-text-stroke: 1px rgba(200,169,110,0.6);
-      margin-bottom: 0.8rem;
-    }
-
-    .skill-name {
-      font-size: 0.88rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--white);
-      margin-bottom: 0.5rem;
-    }
-
-    .skill-desc { font-size: 0.9rem; color: var(--dim); line-height: 1.6; }
-
-    /* ─── LESSONS ─── */
-    .lessons { background: var(--black); }
-
-    .lessons-table {
-      margin-top: 4rem;
-      border: 1px solid var(--border);
-    }
-
-    .lesson-row {
-      display: grid;
-      grid-template-columns: 56px 1fr 1fr 120px;
-      background: var(--black);
-      border-bottom: 1px solid var(--border);
-      transition: background 0.2s;
-    }
-
-    .lesson-row:last-child { border-bottom: none; }
-    .lesson-row:hover { background: var(--surface); }
-
-    .lesson-row > * { padding: 2rem 1.8rem; border-right: 1px solid var(--border); }
-    .lesson-row > *:last-child { border-right: none; }
-
-    .l-index {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 0.9rem;
-      color: var(--accent);
-      letter-spacing: 0.1em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .l-name h3 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.3rem;
-      color: var(--white);
-      margin-bottom: 0.4rem;
-    }
-
-    .l-name p { font-size: 0.82rem; color: var(--dim); line-height: 1.55; max-width: 300px; }
-
-    .l-features { display: flex; flex-direction: column; justify-content: center; gap: 0.45rem; }
-
-    .l-features span {
-      font-size: 0.88rem;
-      color: var(--dim);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .l-features span::before {
-      content: '';
-      width: 3px; height: 3px;
-      background: var(--accent);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .l-badge {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .badge {
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      border: 1px solid var(--accent-border);
-      padding: 0.45rem 0.9rem;
-      border-radius: 2px;
-      background: var(--accent-dim);
-      white-space: nowrap;
-      text-align: center;
-    }
-
-    /* ─── CTA ─── */
-    .cta-section {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      padding: 9rem 3rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-section::before {
-      content: 'TENNIS';
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 28vw;
-      color: transparent;
-      -webkit-text-stroke: 1px rgba(200,169,110,0.035);
-      white-space: nowrap;
-      pointer-events: none;
-    }
-
-    .cta-inner { position: relative; z-index: 1; }
-
-    .cta-title { margin-bottom: 1.2rem; }
-    .cta-title .ghost {
-      color: transparent;
-      -webkit-text-stroke: 1px rgba(245,242,238,0.25);
-    }
-
-    .cta-sub {
-      font-family: 'DM Serif Display', serif;
-      font-style: italic;
-      font-size: 1.1rem;
-      color: var(--dim);
-      margin-bottom: 3.5rem;
-    }
-
-    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-
-    .btn-gold {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      background: var(--accent);
-      color: var(--black);
-      text-decoration: none;
-      padding: 0.95rem 2.2rem;
-      font-size: 0.88rem;
-      font-weight: 500;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      border-radius: 2px;
-      transition: all 0.2s;
-    }
-
-    .btn-gold:hover { background: #d9bc80; transform: translateY(-2px); }
-
-    .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      background: transparent;
-      color: var(--white);
-      text-decoration: none;
-      padding: 0.95rem 2.2rem;
-      font-size: 0.88rem;
-      font-weight: 300;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      border: 1px solid var(--border);
-      border-radius: 2px;
-      transition: all 0.2s;
-    }
-
-    .btn-outline:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-2px); }
-
-    .cta-footnote {
-      margin-top: 2.5rem;
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      color: rgba(245,242,238,0.25);
-    }
-
-    /* ─── FOOTER ─── */
-    footer {
-      background: var(--black);
-      border-top: 1px solid var(--border);
-      padding: 1.8rem 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .f-logo { font-family: 'Bebas Neue', sans-serif; font-size: 0.95rem; letter-spacing: 0.12em; color: rgba(245,242,238,0.3); }
-    .f-logo span { color: var(--accent); opacity: 0.6; }
-
-    .f-links { display: flex; gap: 2rem; }
-
-    .f-links a {
-      font-size: 0.72rem;
-      letter-spacing: 0.07em;
-      color: rgba(245,242,238,0.28);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .f-links a:hover { color: rgba(245,242,238,0.65); }
-
-    /* ─── AI ANALYSIS SECTION ─── */
-    .analysis-section {
-      background: var(--black);
-      border-top: 1px solid var(--border);
-      padding: 7rem 3rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .analysis-section::before {
-      content: 'ANALYZE';
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 22vw;
-      color: transparent;
-      -webkit-text-stroke: 1px rgba(200,169,110,0.025);
-      white-space: nowrap;
-      pointer-events: none;
-      user-select: none;
-    }
-
+    /* AI ANALYSIS */
+    .analysis-section { background: var(--black); border-top: 1px solid var(--border); padding: 7rem 3rem; position: relative; overflow: hidden; }
+    .analysis-section::before { content: 'ANALYZE'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Bebas Neue', sans-serif; font-size: 22vw; color: transparent; -webkit-text-stroke: 1px rgba(200,169,110,0.025); white-space: nowrap; pointer-events: none; user-select: none; }
     .analysis-section .container { position: relative; z-index: 1; }
-
-    .analysis-intro {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: end;
-      margin-bottom: 5rem;
-    }
-
-    .analysis-intro-text .body-text { max-width: 440px; }
-
-    .analysis-how {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-      border: 1px solid var(--border);
-      margin-bottom: 5rem;
-    }
-
-    .analysis-step {
-      padding: 1.8rem;
-      border-right: 1px solid var(--border);
-      position: relative;
-    }
-
+    .analysis-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: end; margin-bottom: 5rem; }
+    .analysis-how { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--border); margin-bottom: 5rem; }
+    .analysis-step { padding: 1.8rem; border-right: 1px solid var(--border); }
     .analysis-step:last-child { border-right: none; }
-
-    .analysis-step-num {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 3rem;
-      color: transparent;
-      -webkit-text-stroke: 1px rgba(200,169,110,0.4);
-      line-height: 1;
-      margin-bottom: 0.8rem;
-    }
-
-    .analysis-step h4 {
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--white);
-      margin-bottom: 0.4rem;
-    }
-
+    .analysis-step-num { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: transparent; -webkit-text-stroke: 1px rgba(200,169,110,0.4); line-height: 1; margin-bottom: 0.8rem; }
+    .analysis-step h4 { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); margin-bottom: 0.4rem; }
     .analysis-step p { font-size: 0.8rem; color: var(--dim); line-height: 1.55; }
 
-    /* Upload form */
-    .analysis-form-wrap {
-      border: 1px solid var(--border);
-      background: var(--surface);
-    }
-
-    .analysis-form-header {
-      padding: 1.4rem 2rem;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .analysis-form-header-left {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .analysis-form-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.2rem;
-      letter-spacing: 0.08em;
-      color: var(--white);
-    }
-
-    .analysis-badge {
-      font-size: 0.65rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      border: 1px solid var(--accent-border);
-      padding: 0.3rem 0.7rem;
-      border-radius: 2px;
-      background: var(--accent-dim);
-    }
-
-    .analysis-cost-note {
-      font-size: 0.72rem;
-      color: var(--dim);
-      letter-spacing: 0.05em;
-    }
-
-    .analysis-form-body {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-    }
-
-    .analysis-panel {
-      padding: 2.2rem;
-      border-right: 1px solid var(--border);
-    }
-
+    /* UPLOAD FORM */
+    .analysis-form-wrap { border: 1px solid var(--border); background: var(--surface); }
+    .analysis-form-header { padding: 1.4rem 2rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .analysis-form-header-left { display: flex; align-items: center; gap: 1rem; }
+    .analysis-form-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 0.08em; color: var(--white); }
+    .analysis-badge { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent-border); padding: 0.3rem 0.7rem; border-radius: 2px; background: var(--accent-dim); }
+    .analysis-cost-note { font-size: 0.72rem; color: var(--dim); }
+    .analysis-form-body { display: grid; grid-template-columns: 1fr 1fr; }
+    .analysis-panel { padding: 2.2rem; border-right: 1px solid var(--border); }
     .analysis-panel:last-child { border-right: none; }
-
-    .analysis-panel-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 500;
-      margin-bottom: 1.4rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
+    .analysis-panel-label { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: 1.4rem; display: flex; align-items: center; gap: 0.6rem; }
     .analysis-panel-label::before { content: ''; width: 16px; height: 1px; background: var(--accent); opacity: 0.6; }
-
-    /* Drop zone */
-    .drop-zone {
-      border: 1px dashed rgba(200,169,110,0.25);
-      padding: 3rem 2rem;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.25s;
-      position: relative;
-      background: rgba(200,169,110,0.02);
-    }
-
-    .drop-zone:hover, .drop-zone.dragover {
-      border-color: rgba(200,169,110,0.55);
-      background: rgba(200,169,110,0.04);
-    }
-
-    .drop-zone input[type="file"] {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      cursor: pointer;
-      width: 100%;
-      height: 100%;
-    }
-
-    .drop-icon {
-      width: 40px; height: 40px;
-      margin: 0 auto 1rem;
-      opacity: 0.4;
-    }
-
-    .drop-zone h4 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.1rem;
-      letter-spacing: 0.08em;
-      color: var(--white);
-      margin-bottom: 0.35rem;
-    }
-
-    .drop-zone p {
-      font-size: 0.78rem;
-      color: var(--dim);
-      line-height: 1.5;
-    }
-
-    .drop-types {
-      margin-top: 0.8rem;
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(200,169,110,0.45);
-    }
-
-    .drop-selected {
-      margin-top: 0.8rem;
-      font-size: 0.8rem;
-      color: var(--accent);
-      font-weight: 400;
-      display: none;
-    }
-
-    .shoot-tips {
-      margin-top: 1.4rem;
-      padding: 1rem 1.2rem;
-      border-left: 2px solid var(--accent-border);
-      background: var(--accent-dim);
-    }
-
-    .shoot-tips p {
-      font-size: 0.78rem;
-      color: var(--dim);
-      line-height: 1.6;
-    }
-
+    .drop-zone { border: 1px dashed rgba(200,169,110,0.25); padding: 3rem 2rem; text-align: center; cursor: pointer; transition: all 0.25s; position: relative; background: rgba(200,169,110,0.02); }
+    .drop-zone:hover, .drop-zone.dragover { border-color: rgba(200,169,110,0.55); background: rgba(200,169,110,0.04); }
+    .drop-zone input[type="file"].desktop-input { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
+    .drop-icon { width: 40px; height: 40px; margin: 0 auto 1rem; opacity: 0.4; }
+    .drop-zone h4 { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.08em; color: var(--white); margin-bottom: 0.35rem; }
+    .drop-zone p { font-size: 0.78rem; color: var(--dim); }
+    .drop-types { margin-top: 0.8rem; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(200,169,110,0.45); }
+    .drop-selected { margin-top: 0.8rem; font-size: 0.8rem; color: var(--accent); display: none; }
+    .shoot-tips { margin-top: 1.4rem; padding: 1rem 1.2rem; border-left: 2px solid var(--accent-border); background: var(--accent-dim); }
+    .shoot-tips p { font-size: 0.78rem; color: var(--dim); line-height: 1.6; }
     .shoot-tips strong { color: rgba(245,242,238,0.7); font-weight: 500; }
-
-    /* Form fields */
     .af-field { margin-bottom: 1.1rem; }
-
-    .af-field label {
-      display: block;
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--dim);
-      margin-bottom: 0.4rem;
-    }
-
-    .af-field input,
-    .af-field select,
-    .af-field textarea {
-      width: 100%;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--border);
-      color: var(--white);
-      padding: 0.65rem 0.9rem;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.88rem;
-      font-weight: 300;
-      outline: none;
-      transition: border-color 0.2s;
-      border-radius: 0;
-      -webkit-appearance: none;
-    }
-
-    .af-field input:focus,
-    .af-field select:focus,
-    .af-field textarea:focus { border-color: rgba(200,169,110,0.5); }
-
+    .af-field label { display: block; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--dim); margin-bottom: 0.4rem; }
+    .af-field input, .af-field select, .af-field textarea { width: 100%; background: rgba(255,255,255,0.03); border: 1px solid var(--border); color: var(--white); padding: 0.65rem 0.9rem; font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 300; outline: none; transition: border-color 0.2s; border-radius: 0; -webkit-appearance: none; }
+    .af-field input:focus, .af-field select:focus, .af-field textarea:focus { border-color: rgba(200,169,110,0.5); }
     .af-field select option { background: #161514; color: var(--white); }
-
     .af-field textarea { resize: vertical; min-height: 72px; }
-
     .af-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
-
-    .btn-analyze {
-      width: 100%;
-      margin-top: 0.5rem;
-      padding: 1rem 2rem;
-      background: var(--accent);
-      color: var(--black);
-      border: none;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1rem;
-      letter-spacing: 0.15em;
-      cursor: pointer;
-      transition: all 0.2s;
-      border-radius: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-    }
-
+    .btn-analyze { width: 100%; margin-top: 0.5rem; padding: 1rem 2rem; background: var(--accent); color: var(--black); border: none; font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.15em; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
     .btn-analyze:hover { background: #d9bc80; transform: translateY(-1px); }
     .btn-analyze:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
 
-    /* Loading overlay */
-    .an-loading {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(8,8,8,0.94);
-      z-index: 200;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1.6rem;
-    }
+    /* Mobile upload */
+    .mobile-upload-btns { display: none; flex-direction: column; gap: 0.7rem; width: 100%; margin-top: 0.4rem; }
+    .mobile-btn { display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 1.2rem; font-family: 'Bebas Neue', sans-serif; font-size: 0.95rem; letter-spacing: 0.1em; cursor: pointer; transition: all 0.2s; border-radius: 0; }
+    .mobile-btn-camera { background: var(--accent); color: var(--black); border: none; }
+    .mobile-btn-camera:hover { background: #d9bc80; }
+    .mobile-btn-library { background: transparent; color: var(--white); border: 1px solid var(--border); }
+    .mobile-btn-library:hover { border-color: rgba(200,169,110,0.4); }
+    .desktop-input-wrap { display: block; }
+    .desktop-only { display: block; }
 
+    /* LOADING */
+    .an-loading { display: none; position: fixed; inset: 0; background: rgba(8,8,8,0.94); z-index: 200; flex-direction: column; align-items: center; justify-content: center; gap: 1.6rem; }
     .an-loading.active { display: flex; }
-
-    .an-spinner {
-      width: 52px; height: 52px;
-      border-radius: 50%;
-      border: 1.5px solid rgba(200,169,110,0.15);
-      border-top-color: var(--accent);
-      animation: spin 1s linear infinite;
-    }
-
+    .an-spinner { width: 52px; height: 52px; border-radius: 50%; border: 1.5px solid rgba(200,169,110,0.15); border-top-color: var(--accent); animation: spin 1s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
-
-    .an-loading-label {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1rem;
-      letter-spacing: 0.2em;
-      color: var(--accent);
-    }
-
-    .an-steps {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-      text-align: center;
-    }
-
-    .an-step {
-      font-size: 0.78rem;
-      letter-spacing: 0.06em;
-      color: rgba(245,242,238,0.2);
-      transition: color 0.4s;
-    }
-
+    .an-loading-label { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.2em; color: var(--accent); }
+    .an-steps { display: flex; flex-direction: column; gap: 0.4rem; text-align: center; }
+    .an-step { font-size: 0.78rem; letter-spacing: 0.06em; color: rgba(245,242,238,0.2); transition: color 0.4s; }
     .an-step.active { color: rgba(245,242,238,0.7); }
     .an-step.done { color: rgba(200,169,110,0.45); }
 
-    /* Results */
-    .an-results {
-      display: none;
-      border: 1px solid var(--border);
-    }
-
+    /* RESULTS */
+    .an-results { display: none; border: 1px solid var(--border); }
     .an-results.visible { display: block; }
-
-    .an-results-header {
-      padding: 1.4rem 2rem;
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .an-results-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.4rem;
-      letter-spacing: 0.06em;
-      color: var(--white);
-    }
-
-    .an-results-meta {
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--dim);
-      margin-top: 0.15rem;
-    }
-
-    .btn-new-analysis {
-      padding: 0.6rem 1.2rem;
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--dim);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.2s;
-      border-radius: 0;
-    }
-
+    .an-results-header { padding: 1.4rem 2rem; background: var(--surface); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .an-results-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.06em; color: var(--white); }
+    .an-results-meta { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim); margin-top: 0.15rem; }
+    .btn-new-analysis { padding: 0.6rem 1.2rem; background: transparent; border: 1px solid var(--border); color: var(--dim); font-family: 'DM Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; }
     .btn-new-analysis:hover { border-color: rgba(200,169,110,0.4); color: var(--accent); }
-
-    .an-results-body {
-      padding: 2.5rem 2.8rem;
-      background: var(--black);
-    }
-
-    /* Analysis markdown rendering */
-    .analysis-output h2 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.6rem;
-      letter-spacing: 0.05em;
-      color: var(--accent);
-      margin: 2.5rem 0 0.8rem;
-      padding-top: 0.5rem;
-      border-top: 1px solid var(--border);
-    }
-
+    .an-results-body { padding: 2.5rem 2.8rem; background: var(--black); }
+    .analysis-output h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 0.05em; color: var(--accent); margin: 2.5rem 0 0.8rem; padding-top: 0.5rem; border-top: 1px solid var(--border); }
     .analysis-output h2:first-child { margin-top: 0; border-top: none; }
-
-    .analysis-output h3 {
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--white);
-      margin: 1.4rem 0 0.5rem;
-    }
-
-    .analysis-output p {
-      font-size: 0.92rem;
-      font-weight: 300;
-      color: rgba(245,242,238,0.6);
-      line-height: 1.85;
-      margin-bottom: 0.8rem;
-    }
-
+    .analysis-output h3 { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--white); margin: 1.4rem 0 0.5rem; }
+    .analysis-output p { font-size: 0.92rem; font-weight: 300; color: rgba(245,242,238,0.6); line-height: 1.85; margin-bottom: 0.8rem; }
     .analysis-output strong { color: var(--white); font-weight: 500; }
+    .analysis-output ul { margin: 0.4rem 0 1rem 1.2rem; }
+    .analysis-output li { font-size: 0.9rem; font-weight: 300; color: rgba(245,242,238,0.6); line-height: 1.7; margin-bottom: 0.3rem; }
+    .analysis-output hr { border: none; border-top: 1px solid var(--border); margin: 1.6rem 0; }
 
-    .analysis-output em { color: var(--accent); font-style: normal; }
+    /* CTA */
+    .cta-section { background: var(--surface); border-top: 1px solid var(--border); padding: 9rem 3rem; text-align: center; position: relative; overflow: hidden; }
+    .cta-section::before { content: 'TENNIS'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Bebas Neue', sans-serif; font-size: 28vw; color: transparent; -webkit-text-stroke: 1px rgba(200,169,110,0.03); white-space: nowrap; pointer-events: none; }
+    .cta-inner { position: relative; z-index: 1; }
+    .cta-title { margin-bottom: 1.2rem; }
+    .cta-title .ghost { color: transparent; -webkit-text-stroke: 1px rgba(245,242,238,0.25); }
+    .cta-sub { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 1.1rem; color: var(--dim); margin-bottom: 3.5rem; }
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .cta-footnote { margin-top: 2.5rem; font-size: 0.72rem; letter-spacing: 0.1em; color: rgba(245,242,238,0.25); }
 
-    .analysis-output ul, .analysis-output ol {
-      margin: 0.4rem 0 1rem 1.2rem;
-    }
 
-    .analysis-output li {
-      font-size: 0.9rem;
-      font-weight: 300;
-      color: rgba(245,242,238,0.6);
-      line-height: 1.7;
-      margin-bottom: 0.3rem;
-    }
+    /* CONTACT FORM */
+    .contact-form { max-width: 560px; margin: 2.5rem auto 0; text-align: left; }
+    .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 0.8rem; }
+    .cf-field { margin-bottom: 0; }
+    .cf-field input, .cf-field select, .cf-field textarea { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: var(--white); padding: 0.75rem 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 300; outline: none; transition: border-color 0.2s; border-radius: 0; -webkit-appearance: none; }
+    .cf-field input:focus, .cf-field select:focus, .cf-field textarea:focus { border-color: rgba(200,169,110,0.5); }
+    .cf-field select option { background: #161514; color: var(--white); }
+    .cf-field textarea { resize: vertical; margin-bottom: 0.8rem; }
+    .cf-field input::placeholder, .cf-field textarea::placeholder { color: rgba(245,242,238,0.3); }
+    @media (max-width: 600px) { .cf-row { grid-template-columns: 1fr; } }
 
-    .analysis-output hr {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 1.6rem 0;
-    }
+    /* FOOTER */
+    footer { background: var(--black); border-top: 1px solid var(--border); padding: 1.8rem 3rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .f-logo { font-family: 'Bebas Neue', sans-serif; font-size: 0.95rem; letter-spacing: 0.12em; color: rgba(245,242,238,0.3); }
+    .f-logo span { color: var(--accent); opacity: 0.6; }
+    .f-links { display: flex; gap: 2rem; }
+    .f-links a { font-size: 0.72rem; letter-spacing: 0.07em; color: rgba(245,242,238,0.28); text-decoration: none; transition: color 0.2s; }
+    .f-links a:hover { color: rgba(245,242,238,0.65); }
 
-    /* Mobile upload buttons */
-    .mobile-upload-btns {
-      display: none;
-      flex-direction: column;
-      gap: 0.7rem;
-      width: 100%;
-      margin-top: 0.4rem;
-    }
-
-    .mobile-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0.85rem 1.2rem;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 0.95rem;
-      letter-spacing: 0.1em;
-      cursor: pointer;
-      transition: all 0.2s;
-      border-radius: 0;
-    }
-
-    .mobile-btn-camera {
-      background: var(--accent);
-      color: var(--black);
-      border: none;
-    }
-
-    .mobile-btn-camera:hover { background: #d9bc80; }
-
-    .mobile-btn-library {
-      background: transparent;
-      color: var(--white);
-      border: 1px solid var(--border);
-    }
-
-    .mobile-btn-library:hover { border-color: rgba(200,169,110,0.4); }
-
-    /* Desktop: show standard file input, hide mobile buttons */
-    .desktop-input { display: block; }
-    .desktop-only { display: block; }
-
+    /* RESPONSIVE */
     @media (max-width: 700px) {
-      /* On mobile: hide desktop input, show mobile buttons */
-      .desktop-input { display: none !important; }
+      .desktop-input-wrap { display: none !important; }
       .desktop-only { display: none !important; }
       .mobile-upload-btns { display: flex; }
-      /* Stack form panels vertically */
       .analysis-form-body { grid-template-columns: 1fr; }
       .analysis-panel { border-right: none; border-bottom: 1px solid var(--border); }
       .analysis-panel:last-child { border-bottom: none; }
-      /* Make drop zone more tap-friendly */
       .drop-zone { padding: 2rem 1.2rem; }
-      /* Full-width row fields on mobile */
       .af-row { grid-template-columns: 1fr; }
-      /* How-it-works: 2 columns on mobile */
       .analysis-how { grid-template-columns: 1fr 1fr; }
       .analysis-step:nth-child(2) { border-right: none; }
-      .analysis-step:nth-child(1),
-      .analysis-step:nth-child(2) { border-bottom: 1px solid var(--border); }
-      /* Intro stacks */
+      .analysis-step:nth-child(1), .analysis-step:nth-child(2) { border-bottom: 1px solid var(--border); }
       .analysis-intro { grid-template-columns: 1fr; gap: 2rem; }
-      /* Results header stacks */
       .an-results-header { flex-direction: column; gap: 1rem; align-items: flex-start; }
+      .pros-grid { grid-template-columns: 1fr; }
+      .courts-grid { grid-template-columns: 1fr; }
+      .directory-intro { grid-template-columns: 1fr; gap: 2rem; }
     }
     @media (max-width: 900px) {
       nav { padding: 1.2rem 1.5rem; }
       .nav-links { display: none; }
       section { padding: 5rem 1.5rem; }
+      .directory { padding: 5rem 1.5rem; }
       .hero-inner { padding: 110px 1.5rem 4rem; grid-template-columns: 1fr; }
-      .hero-illustration { display: none; }
-      .hero-sub-row { flex-direction: column; align-items: flex-start; }
-      .hero-contacts { align-items: flex-start; }
+  
+    .pb-tag {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: 0.19em;
+      color: var(--accent);
+      -webkit-text-stroke: 0;
+      letter-spacing: 0.06em;
+      position: absolute;
+      right: 8%;
+      bottom: -0.5em;
+      transform: rotate(-4deg);
+      transform-origin: right center;
+      opacity: 0.85;
+      white-space: nowrap;
+      font-weight: 400;
+    }
+
+    .hero-illustration { display: none; }
+      .hero-sub-row { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+      .hero-stats { gap: 2rem; }
       .hero-scroll-bar { padding: 1.5rem 1.5rem; }
-      .academy-band { padding: 1rem 1.5rem; gap: 1rem; }
-      .a-sep { display: none; }
-      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .about-big-letter { font-size: 7rem; }
-      .skills-grid { grid-template-columns: 1fr 1fr; }
-      .skill-cell:nth-child(3n) { border-right: 1px solid var(--border); }
-      .skill-cell:nth-child(2n) { border-right: none; }
-      .skill-cell:nth-child(n+5) { border-bottom: none; }
-      .skill-cell:nth-child(5) { border-bottom: 1px solid var(--border); }
-      .lesson-row { grid-template-columns: 1fr; }
-      .lesson-row > * { border-right: none; border-bottom: 1px solid var(--border); }
-      .lesson-row > *:last-child { border-bottom: none; }
-      .l-index { display: none; }
+      .band { padding: 1rem 1.5rem; gap: 1rem; }
+      .b-sep { display: none; }
+      .featured-pro-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .pro-monogram { font-size: 7rem; }
+      .directory-intro { grid-template-columns: 1fr; gap: 2rem; }
+      .pros-grid { grid-template-columns: 1fr 1fr; }
+      .courts-grid { grid-template-columns: 1fr; }
       .analysis-intro { grid-template-columns: 1fr; gap: 2rem; }
       .analysis-how { grid-template-columns: 1fr 1fr; }
       .analysis-step:nth-child(2) { border-right: none; }
-      .analysis-step:nth-child(1),
-      .analysis-step:nth-child(2) { border-bottom: 1px solid var(--border); }
+      .analysis-step:nth-child(1), .analysis-step:nth-child(2) { border-bottom: 1px solid var(--border); }
       .analysis-form-body { grid-template-columns: 1fr; }
       .analysis-panel { border-right: none; border-bottom: 1px solid var(--border); }
       .analysis-panel:last-child { border-bottom: none; }
       footer { flex-direction: column; padding: 1.5rem; }
+      .dir-tabs { overflow-x: auto; }
     }
   </style>
 </head>
@@ -1213,11 +368,11 @@
 
   <!-- NAV -->
   <nav>
-    <div class="nav-logo">Huckins <span>Tennis</span></div>
+    <a href="#top" class="nav-logo">San Diego <span>Tennis</span><span class="nav-pb">&amp; Pickleball</span></a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#training">Training</a></li>
-      <li><a href="#lessons">Lessons</a></li>
+      <li><a href="#featured">Featured Pro</a></li>
+      <li><a href="#directory">Find a Pro</a></li>
+      <li><a href="#courts">Courts</a></li>
       <li><a href="#analysis">AI Analysis</a></li>
       <li><a href="#contact" class="nav-book">Book a Lesson</a></li>
     </ul>
@@ -1226,169 +381,102 @@
   <!-- HERO -->
   <section class="hero" id="top">
     <div class="hero-inner">
-      <!-- Left: Text -->
       <div class="hero-text">
         <div class="hero-eyebrow">
           <div class="eyebrow-line"></div>
-          <span>San Diego, CA &nbsp;·&nbsp; Private Instruction</span>
+          <span>San Diego County &nbsp;·&nbsp; Tennis Resource</span>
         </div>
         <h1 class="hero-headline">
-          Raise<br>
-          <span class="line-ghost">Your</span>
-          <span class="line-accent">Game.</span>
+          San Diego<br>
+          <span class="line-ghost" style="position:relative;display:block;">Tennis<span class="pb-tag">&amp; Pickleball</span></span>
+          <span class="line-accent">Guide.</span>
         </h1>
         <div class="hero-sub-row">
-          <p class="hero-tagline">From first serve to competitive edge — precision instruction built on a lifetime of playing and coaching at the highest level.</p>
-          <div class="hero-contacts">
-            <a href="tel:8587524321">
-              <span class="contact-dot"></span>
-              858-752-4321
-            </a>
-            <a href="/cdn-cgi/l/email-protection#e4a985968fca8c91878f8d8a97a48389858d88ca878b89">
-              <span class="contact-dot"></span>
-              <span class="__cf_email__" data-cfemail="aae7cbd8c184c2dfc9c1c3c4d9eacdc7cbc3c684c9c5c7">[email&#160;protected]</span>
-            </a>
+          <p class="hero-tagline">Find certified pros, public courts, and AI-powered stroke analysis — everything San Diego tennis in one place.</p>
+          <div class="hero-stats">
+            <div>
+              <div class="hero-stat-num">170+</div>
+              <div class="hero-stat-label">Courts County-Wide</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">365</div>
+              <div class="hero-stat-label">Days of Play</div>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Right: Geometric Court Illustration -->
       <div class="hero-illustration">
         <svg viewBox="0 0 400 520" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-          <!-- Outer court rectangle -->
-          <rect class="court-draw" x="40" y="30" width="320" height="460"
-            stroke="rgba(200,169,110,0.55)" stroke-width="1.5"/>
-
-          <!-- Singles sidelines (inner vertical lines) -->
-          <line class="court-draw" x1="95" y1="30" x2="95" y2="490"
-            stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
-          <line class="court-draw" x1="305" y1="30" x2="305" y2="490"
-            stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
-
-          <!-- Net line (horizontal center) -->
-          <line class="court-draw-2" x1="40" y1="260" x2="360" y2="260"
-            stroke="rgba(200,169,110,0.7)" stroke-width="2"/>
-
-          <!-- Service boxes top -->
-          <line class="court-draw-2" x1="95" y1="140" x2="305" y2="140"
-            stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
-          <line class="court-draw-2" x1="200" y1="140" x2="200" y2="260"
-            stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
-
-          <!-- Service boxes bottom -->
-          <line class="court-draw-2" x1="95" y1="380" x2="305" y2="380"
-            stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
-          <line class="court-draw-2" x1="200" y1="260" x2="200" y2="380"
-            stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
-
-          <!-- Center service mark top -->
-          <line class="court-draw-3" x1="196" y1="30" x2="204" y2="30"
-            stroke="rgba(200,169,110,0.6)" stroke-width="2"/>
-
-          <!-- Center service mark bottom -->
-          <line class="court-draw-3" x1="196" y1="490" x2="204" y2="490"
-            stroke="rgba(200,169,110,0.6)" stroke-width="2"/>
-
-          <!-- Baseline center marks -->
-          <line class="court-draw-3" x1="200" y1="490" x2="200" y2="475"
-            stroke="rgba(200,169,110,0.5)" stroke-width="1.5"/>
-          <line class="court-draw-3" x1="200" y1="30" x2="200" y2="45"
-            stroke="rgba(200,169,110,0.5)" stroke-width="1.5"/>
-
-          <!-- Diagonal accent lines (abstract / geometric feel) -->
-          <line class="court-draw-3" x1="40" y1="30" x2="360" y2="490"
-            stroke="rgba(200,169,110,0.07)" stroke-width="1"/>
-          <line class="court-draw-3" x1="360" y1="30" x2="40" y2="490"
-            stroke="rgba(200,169,110,0.07)" stroke-width="1"/>
-
-          <!-- Net post dots -->
-          <circle class="court-fade" cx="40" cy="260" r="4"
-            fill="var(--accent)" opacity="0.7"/>
-          <circle class="court-fade" cx="360" cy="260" r="4"
-            fill="var(--accent)" opacity="0.7"/>
-
-          <!-- Corner accent squares -->
-          <rect class="court-fade" x="36" y="26" width="8" height="8"
-            fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
-          <rect class="court-fade" x="356" y="26" width="8" height="8"
-            fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
-          <rect class="court-fade" x="36" y="486" width="8" height="8"
-            fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
-          <rect class="court-fade" x="356" y="486" width="8" height="8"
-            fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
-
-          <!-- Ball (glowing dot at net center) -->
-          <circle class="court-fade" cx="200" cy="260" r="7"
-            fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.9"/>
-          <circle class="court-fade" cx="200" cy="260" r="3"
-            fill="var(--accent)" opacity="0.8"/>
-
-          <!-- Subtle glow behind ball -->
-          <circle class="court-fade" cx="200" cy="260" r="18"
-            fill="var(--accent)" opacity="0.04"/>
-
-          <!-- "NET" label -->
-          <text class="court-fade" x="200" y="252" text-anchor="middle"
-            font-family="'Bebas Neue', sans-serif" font-size="10"
-            letter-spacing="0.2em" fill="rgba(200,169,110,0.5)">NET</text>
-
+          <rect class="court-draw" x="40" y="30" width="320" height="460" stroke="rgba(200,169,110,0.55)" stroke-width="1.5"/>
+          <line class="court-draw" x1="95" y1="30" x2="95" y2="490" stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
+          <line class="court-draw" x1="305" y1="30" x2="305" y2="490" stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
+          <line class="court-draw-2" x1="40" y1="260" x2="360" y2="260" stroke="rgba(200,169,110,0.7)" stroke-width="2"/>
+          <line class="court-draw-2" x1="95" y1="140" x2="305" y2="140" stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
+          <line class="court-draw-2" x1="200" y1="140" x2="200" y2="260" stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
+          <line class="court-draw-2" x1="95" y1="380" x2="305" y2="380" stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
+          <line class="court-draw-2" x1="200" y1="260" x2="200" y2="380" stroke="rgba(200,169,110,0.35)" stroke-width="1"/>
+          <line class="court-draw-3" x1="200" y1="490" x2="200" y2="475" stroke="rgba(200,169,110,0.5)" stroke-width="1.5"/>
+          <line class="court-draw-3" x1="200" y1="30" x2="200" y2="45" stroke="rgba(200,169,110,0.5)" stroke-width="1.5"/>
+          <line class="court-draw-3" x1="40" y1="30" x2="360" y2="490" stroke="rgba(200,169,110,0.07)" stroke-width="1"/>
+          <line class="court-draw-3" x1="360" y1="30" x2="40" y2="490" stroke="rgba(200,169,110,0.07)" stroke-width="1"/>
+          <circle class="court-fade" cx="40" cy="260" r="4" fill="var(--accent)" opacity="0.7"/>
+          <circle class="court-fade" cx="360" cy="260" r="4" fill="var(--accent)" opacity="0.7"/>
+          <rect class="court-fade" x="36" y="26" width="8" height="8" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
+          <rect class="court-fade" x="356" y="26" width="8" height="8" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
+          <rect class="court-fade" x="36" y="486" width="8" height="8" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
+          <rect class="court-fade" x="356" y="486" width="8" height="8" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
+          <circle class="court-fade" cx="200" cy="260" r="7" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.9"/>
+          <circle class="court-fade" cx="200" cy="260" r="3" fill="var(--accent)" opacity="0.8"/>
+          <circle class="court-fade" cx="200" cy="260" r="18" fill="var(--accent)" opacity="0.04"/>
+          <text class="court-fade" x="200" y="252" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="10" letter-spacing="0.2em" fill="rgba(200,169,110,0.5)">NET</text>
         </svg>
       </div>
     </div>
     <div class="hero-scroll-bar">
       <div class="scroll-line"></div>
-      <span class="scroll-text">Scroll</span>
+      <span class="scroll-text">Explore</span>
     </div>
   </section>
 
-  <!-- ACADEMY BAND -->
-  <div class="academy-band">
-    <div class="a-item">
-      <span class="a-label">Player &amp; Coach</span>
-      <span class="a-value">IMG Academy — Bradenton, FL</span>
-    </div>
-    <div class="a-sep"></div>
-    <div class="a-item">
-      <span class="a-label">Instruction</span>
-      <span class="a-value">All Ages &amp; Skill Levels</span>
-    </div>
-    <div class="a-sep"></div>
-    <div class="a-item">
-      <span class="a-label">Availability</span>
-      <span class="a-value">Day &amp; Evening &nbsp;·&nbsp; Half-Hour Increments</span>
-    </div>
+  <!-- BAND -->
+  <div class="band">
+    <div class="b-item"><span class="b-label">Certified Pros</span><span class="b-value">USPTA &amp; PTR Instructors</span></div>
+    <div class="b-sep"></div>
+    <div class="b-item"><span class="b-label">Public Courts</span><span class="b-value">Free &amp; Reservable</span></div>
+    <div class="b-sep"></div>
+    <div class="b-item"><span class="b-label">AI Analysis</span><span class="b-value">IMG Academy Methodology</span></div>
+    <div class="b-sep"></div>
+    <div class="b-item"><span class="b-label">All Levels</span><span class="b-value">Beginner to Competitive</span></div>
   </div>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
+  <!-- FEATURED PRO -->
+  <section class="featured-pro" id="featured">
     <div class="container">
-      <div class="label-tag">The Instructor</div>
+      <div class="label-tag">Featured Pro</div>
       <h2 class="big-title">Mark Huckins</h2>
-      <div class="about-grid">
+      <div class="featured-pro-grid">
         <div>
-          <div class="about-big-letter">MH</div>
-          <p class="about-pull">"Individual attention creates the space to focus on what actually holds your game back."</p>
+          <div class="pro-monogram">MH</div>
+          <p class="pro-pull">"Individual attention creates the space to focus on what actually holds your game back."</p>
+          <div class="pro-contact-row">
+            <a href="tel:8587524321" class="btn-gold">📞 &nbsp;858-752-4321</a>
+            <a href="mailto:mark.huckins@gmail.com" class="btn-outline">Book a Lesson</a>
+          </div>
         </div>
         <div>
           <p class="body-text">Mark Huckins brings a deep competitive foundation to every lesson. He trained at <strong>IMG Academy in Bradenton, Florida</strong> — one of the world's most prestigious tennis institutions — progressing through both junior development and college-level competitive programs before transitioning into coaching at the same facility.</p>
-          <p class="body-text">Whether you're brand new to the game looking for a fresh challenge, or an advanced tournament player seeking a competitive edge, the individual focus of private instruction will fundamentally change how you experience the sport.</p>
-          <p class="body-text">Lessons are available day or evening for those with access to a private court or open facility. Take lessons in any half-hour increment on your own schedule.</p>
-          <div class="img-block">
-            <div class="img-block-icon">🎾</div>
+          <p class="body-text">Whether you're brand new to the game or an advanced tournament player seeking a competitive edge, private instruction will fundamentally change how you experience the sport. Available day or evening, any half-hour increment, across San Diego.</p>
+          <div class="pro-badge">
+            <div class="pro-badge-icon">🎾</div>
             <div>
-              <div class="img-block-label">Credentials</div>
-              <div class="img-block-title">IMG Academy — Player &amp; Coach, Bradenton FL</div>
-              <div class="img-block-desc">Junior development, college training, and coaching experience at one of the world's premier tennis academies.</div>
-              <ul style="list-style:none;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.4rem;">
-                <li style="font-size:0.85rem;color:var(--white);display:flex;align-items:center;gap:0.6rem;">
-                  <span style="width:5px;height:5px;background:var(--accent);border-radius:50%;flex-shrink:0;display:inline-block;"></span>
-                  Nationally ranked junior competitor
-                </li>
-                <li style="font-size:0.85rem;color:var(--white);display:flex;align-items:center;gap:0.6rem;">
-                  <span style="width:5px;height:5px;background:var(--accent);border-radius:50%;flex-shrink:0;display:inline-block;"></span>
-                  Division I collegiate athlete
-                </li>
+              <div class="pro-badge-label">Credentials</div>
+              <div class="pro-badge-title">IMG Academy — Player &amp; Coach, Bradenton FL</div>
+              <div class="pro-badge-desc">Junior development, college training, and coaching at one of the world's premier academies.</div>
+              <ul class="pro-creds">
+                <li>Nationally ranked junior competitor</li>
+                <li>Division I collegiate athlete</li>
+                <li>Private, group &amp; clinic formats</li>
+                <li>All ages and skill levels welcome</li>
               </ul>
             </div>
           </div>
@@ -1397,150 +485,371 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section class="skills-strip" id="training">
+  <!-- DIRECTORY -->
+  <div class="directory" id="directory">
     <div class="container">
-      <div class="skills-header">
-        <div class="label-tag">What You'll Develop</div>
-        <h2 class="big-title">Key Skills</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-cell">
-          <div class="skill-num">01</div>
-          <div class="skill-name">Technique</div>
-          <div class="skill-desc">Stroke production, timing, and court positioning refined for your specific game.</div>
+      <div class="directory-intro">
+        <div>
+          <div class="label-tag">San Diego Directory</div>
+          <h2 class="big-title">Find a Pro<br><span style="color:var(--accent);">Near You</span></h2>
         </div>
-        <div class="skill-cell">
-          <div class="skill-num">02</div>
-          <div class="skill-name">Strategy</div>
-          <div class="skill-desc">Learn when and where to hit, identify weaknesses, and capitalize on key points.</div>
-        </div>
-        <div class="skill-cell">
-          <div class="skill-num">03</div>
-          <div class="skill-name">Shot Execution</div>
-          <div class="skill-desc">Slice, topspin, drop shots, lobs, kick serve — the advanced arsenal refined.</div>
-        </div>
-        <div class="skill-cell">
-          <div class="skill-num">04</div>
-          <div class="skill-name">Movement</div>
-          <div class="skill-desc">Body mechanics that improve power, increase endurance, and prevent injuries.</div>
-        </div>
-        <div class="skill-cell">
-          <div class="skill-num">05</div>
-          <div class="skill-name">Footwork</div>
-          <div class="skill-desc">Drills that sharpen recovery time, create explosive speed, and build match stamina.</div>
-        </div>
-        <div class="skill-cell">
-          <div class="skill-num">06</div>
-          <div class="skill-name">Fitness</div>
-          <div class="skill-desc">Court-specific conditioning designed to improve recovery and overall performance.</div>
+        <div>
+          <p class="body-text">Certified teaching pros across San Diego county. All coaches listed hold active USPTA or PTR certification. For a booking or referral, contact us directly — we'll match you with the right pro for your location and goals.</p>
         </div>
       </div>
+
+      <div class="dir-tabs">
+        <button class="dir-tab active" onclick="switchTab('pros', this)">Teaching Pros</button>
+        <button class="dir-tab" onclick="switchTab('courts', this)">Public Courts</button>
+        <button class="dir-tab" onclick="switchTab('pickleball', this)">Pickleball</button>
+      </div>
+
+      <!-- PROS PANEL -->
+      <div class="dir-panel active" id="panel-pros">
+        <div class="dir-filter" id="pro-filters">
+          <button class="filter-btn active" onclick="filterPros('all', this)">All Areas</button>
+          <button class="filter-btn" onclick="filterPros('north', this)">North County</button>
+          <button class="filter-btn" onclick="filterPros('central', this)">Central SD</button>
+          <button class="filter-btn" onclick="filterPros('east', this)">East County</button>
+          <button class="filter-btn" onclick="filterPros('coastal', this)">Coastal</button>
+        </div>
+        <div class="pros-grid" id="pros-grid">
+
+          <div class="pro-card" data-area="north">
+            <div class="pro-card-area">Carmel Valley · North County</div>
+            <div class="pro-card-name">Alberto Ramos</div>
+            <div class="pro-card-cert">USPTA Certified · Trilingual (EN/ES/FR)</div>
+            <div class="pro-card-tags"><span class="pro-tag">All Levels</span><span class="pro-tag">Juniors</span><span class="pro-tag">Adults</span></div>
+            <div class="pro-card-desc">Former #1 Junior in Mexico, trained under Pancho Segura, 12 years ATP tour. Co-founded Ramos Tennis Academy. Now at Carmel Valley Tennis Club.</div>
+            <a href="#contact" class="pro-card-contact">→ Lesson Request</a>
+          </div>
+
+          <div class="pro-card" data-area="north">
+            <div class="pro-card-area">Carmel Valley · North County</div>
+            <div class="pro-card-name">David Evans</div>
+            <div class="pro-card-cert">USPTA Certified Professional</div>
+            <div class="pro-card-tags"><span class="pro-tag">Advanced</span><span class="pro-tag">Strategy</span><span class="pro-tag">All Levels</span></div>
+            <div class="pro-card-desc">Worked with multiple Top 50 World Ranked players. Top 50 USTA Men's Open. Teaches at Carmel Valley Tennis Club.</div>
+            <a href="#contact" class="pro-card-contact">→ Lesson Request</a>
+          </div>
+
+          <div class="pro-card" data-area="north">
+            <div class="pro-card-area">Rancho Santa Fe · North County</div>
+            <div class="pro-card-name">John Delille</div>
+            <div class="pro-card-cert">USPTA Certified</div>
+            <div class="pro-card-tags"><span class="pro-tag">Juniors</span><span class="pro-tag">High School</span><span class="pro-tag">Adults</span></div>
+            <div class="pro-card-desc">Former Tennis Director at Rancho Valencia Resort and Nike Camp at Pepperdine. Coach of the Year 2015, Torrey Pines High School.</div>
+            <a href="#contact" class="pro-card-contact">→ Lesson Request</a>
+          </div>
+
+          <div class="pro-card" data-area="central">
+            <div class="pro-card-area">San Dieguito · Central SD</div>
+            <div class="pro-card-name">Tole Marinkovic</div>
+            <div class="pro-card-cert">USPTA · SD District Pro/Coach of Year 2018</div>
+            <div class="pro-card-tags"><span class="pro-tag">Elite</span><span class="pro-tag">National Champs</span><span class="pro-tag">All Levels</span></div>
+            <div class="pro-card-desc">Five-time national doubles champion (Yugoslavia). Two-time All American. SDSU #1 singles/doubles. 20+ years teaching. </div>
+            <a href="#contact" class="pro-card-contact">→ Lesson Request</a>
+          </div>
+
+          <div class="pro-card" data-area="central">
+            <div class="pro-card-area">San Dieguito · Central SD</div>
+            <div class="pro-card-name">Michelle (MO Tennis)</div>
+            <div class="pro-card-cert">USPTA · 2019 USPTA Player of the Year</div>
+            <div class="pro-card-tags"><span class="pro-tag">High Performance</span><span class="pro-tag">Juniors</span><span class="pro-tag">Adults</span></div>
+            <div class="pro-card-desc">Former Barnes Tennis Center coach. High performance clinics and top junior development. </div>
+            <a href="#contact" class="pro-card-contact">→ Lesson Request</a>
+          </div>
+
+          <div class="pro-card" data-area="east">
+            <div class="pro-card-area">Lake Murray · East County</div>
+            <div class="pro-card-name">Stephen Thom</div>
+            <div class="pro-card-cert">USPTA · USPTA Elevate Chairman SD</div>
+            <div class="pro-card-tags"><span class="pro-tag">Juniors</span><span class="pro-tag">Adults</span><span class="pro-tag">10 &amp; Under</span></div>
+            <div class="pro-card-desc">MS Exercise Science, Oregon State. USPTA 2019 Community Service Award. Runs Fletcher Hills Tennis junior and adult programs at Lake Murray. (619) 402-8133</div>
+            <a href="#contact" class="pro-card-contact">→ Lesson Request</a>
+          </div>
+
+          <div class="pro-card" data-area="central">
+            <div class="pro-card-area">Chira Academy · Central SD</div>
+            <div class="pro-card-name">Catalin (Chira Tennis)</div>
+            <div class="pro-card-cert">USPTA Elite · PTR · Etcheberry Certified</div>
+            <div class="pro-card-tags"><span class="pro-tag">Elite</span><span class="pro-tag">Biomechanics</span><span class="pro-tag">Mental Game</span></div>
+            <div class="pro-card-desc">BS Physical Education &amp; Sports (Tennis). Certified Mental Toughness Specialist. International symposium credentials. Full spectrum from beginner to national level.</div>
+            <a href="#contact" class="pro-card-contact">→ Lesson Request</a>
+          </div>
+
+          <div class="pro-card" data-area="central">
+            <div class="pro-card-area">Chira Academy · Central SD</div>
+            <div class="pro-card-name">Solomon (Footwork Specialist)</div>
+            <div class="pro-card-cert">USPTA Certified</div>
+            <div class="pro-card-tags"><span class="pro-tag">Footwork</span><span class="pro-tag">Juniors</span><span class="pro-tag">Movement</span></div>
+            <div class="pro-card-desc">Etcheberry and Spanish footwork systems expert. 2013 USTA JTT National Champion (14U Advanced). Developed multiple Top 20 SoCal juniors.</div>
+            <a href="#contact" class="pro-card-contact">→ Lesson Request</a>
+          </div>
+
+          <div class="pro-card" data-area="coastal">
+            <div class="pro-card-area">La Jolla · Coastal</div>
+            <div class="pro-card-name">La Jolla Beach &amp; Tennis Club Staff</div>
+            <div class="pro-card-cert">USPTA Certified Team · Director: Conan Lorenzo</div>
+            <div class="pro-card-tags"><span class="pro-tag">Resort</span><span class="pro-tag">Groups</span><span class="pro-tag">All Levels</span></div>
+            <div class="pro-card-desc">Full USPTA staff offering private, semi-private, and group lessons. Clinics, mixers, cardio tennis. Members and hotel guests. </div>
+            <a href="#contact" class="pro-card-contact">→ Lesson Request</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- COURTS PANEL -->
+      <div class="dir-panel" id="panel-courts">
+        <div class="dir-filter" id="court-filters">
+          <button class="filter-btn active" onclick="filterCourts('all', this)">All Areas</button>
+          <button class="filter-btn" onclick="filterCourts('north', this)">North County</button>
+          <button class="filter-btn" onclick="filterCourts('central', this)">Central SD</button>
+          <button class="filter-btn" onclick="filterCourts('east', this)">East County</button>
+          <button class="filter-btn" onclick="filterCourts('coastal', this)">Coastal</button>
+        </div>
+        <div class="courts-grid" id="courts-grid">
+
+          <div class="court-card" data-area="central">
+            <div>
+              <div class="court-area">Balboa Park · Central SD</div>
+              <div class="court-name">Balboa Park Tennis Club</div>
+              <div class="court-address">2221 Morley Field Dr, San Diego 92104</div>
+              <div class="court-meta"><span class="court-pill">Lighted</span><span class="court-pill free">Public</span><span class="court-pill">Hard Courts</span><span class="court-pill">Club Available</span></div>
+            </div>
+            <div><div class="court-courts">25<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="coastal">
+            <div>
+              <div class="court-area">Ocean Beach · Coastal</div>
+              <div class="court-name">Robb Field Tennis Courts</div>
+              <div class="court-address">2525 Bacon St, San Diego 92107</div>
+              <div class="court-meta"><span class="court-pill">Lighted</span><span class="court-pill free">Free</span><span class="court-pill">Daily 8AM–10PM</span></div>
+            </div>
+            <div><div class="court-courts">12<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="north">
+            <div>
+              <div class="court-area">Rancho Penasquitos · North County</div>
+              <div class="court-name">Canyonside Community Park</div>
+              <div class="court-address">12350 Black Mtn Road, San Diego 92129</div>
+              <div class="court-meta"><span class="court-pill">Lighted</span><span class="court-pill free">Free</span><span class="court-pill">Daily 8AM–9:45PM</span></div>
+            </div>
+            <div><div class="court-courts">12<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="east">
+            <div>
+              <div class="court-area">Mission Valley · East County</div>
+              <div class="court-name">Lake Murray Park</div>
+              <div class="court-address">7003 Murray Park Drive, San Diego 92119</div>
+              <div class="court-meta"><span class="court-pill">Lighted</span><span class="court-pill free">Free</span><span class="court-pill">Mon–Thu 8AM–10PM</span></div>
+            </div>
+            <div><div class="court-courts">10<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="coastal">
+            <div>
+              <div class="court-area">La Jolla · Coastal</div>
+              <div class="court-name">La Jolla Tennis Courts</div>
+              <div class="court-address">7632 Draper Ave, La Jolla 92037</div>
+              <div class="court-meta"><span class="court-pill">Lighted</span><span class="court-pill free">Free</span><span class="court-pill">Dawn–9PM Daily</span></div>
+            </div>
+            <div><div class="court-courts">9<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="north">
+            <div>
+              <div class="court-area">Rancho Bernardo · North County</div>
+              <div class="court-name">Rancho Bernardo Community Park</div>
+              <div class="court-address">18402 W. Bernardo Drive, SD 92127</div>
+              <div class="court-meta"><span class="court-pill">Lighted</span><span class="court-pill free">Free</span><span class="court-pill">Daily 7AM–10PM</span></div>
+            </div>
+            <div><div class="court-courts">6<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="coastal">
+            <div>
+              <div class="court-area">Pacific Beach · Coastal</div>
+              <div class="court-name">Pacific Beach Tennis Club</div>
+              <div class="court-address">2639 Grand Ave, San Diego 92109</div>
+              <div class="court-meta"><span class="court-pill">Lighted</span><span class="court-pill free">Public</span><span class="court-pill">Daily 8AM–10PM</span></div>
+            </div>
+            <div><div class="court-courts">7<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="north">
+            <div>
+              <div class="court-area">Carmel Valley · North County</div>
+              <div class="court-name">Carmel Valley Community Park</div>
+              <div class="court-address">3777 Townsgate Drive, SD 92130</div>
+              <div class="court-meta"><span class="court-pill">Lighted</span><span class="court-pill free">Free</span><span class="court-pill">Mon–Fri 8:30AM–8PM</span></div>
+            </div>
+            <div><div class="court-courts">4<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="central">
+            <div>
+              <div class="court-area">University City · Central SD</div>
+              <div class="court-name">Standley Park</div>
+              <div class="court-address">3585 Governor Drive, SD 92122</div>
+              <div class="court-meta"><span class="court-pill">Lighted</span><span class="court-pill free">Free</span><span class="court-pill">Mon–Fri 8AM–10PM</span></div>
+            </div>
+            <div><div class="court-courts">6<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="coastal">
+            <div>
+              <div class="court-area">Barnes Center · Point Loma</div>
+              <div class="court-name">Barnes Tennis Center</div>
+              <div class="court-address">4490 W. Point Loma Blvd, SD 92107</div>
+              <div class="court-meta"><span class="court-pill">Lighted</span><span class="court-pill">2 Clay Courts</span><span class="court-pill">Day Pass Available</span><span class="court-pill">Juniors Programs</span></div>
+            </div>
+            <div><div class="court-courts">27<span>courts</span></div></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PICKLEBALL PANEL -->
+      <div class="dir-panel" id="panel-pickleball">
+        <div class="dir-filter" id="pb-filters">
+          <button class="filter-btn active" onclick="filterPickleball('all', this)">All Areas</button>
+          <button class="filter-btn" onclick="filterPickleball('north', this)">North County</button>
+          <button class="filter-btn" onclick="filterPickleball('central', this)">Central SD</button>
+          <button class="filter-btn" onclick="filterPickleball('east', this)">East County</button>
+          <button class="filter-btn" onclick="filterPickleball('coastal', this)">Coastal</button>
+        </div>
+        <div class="courts-grid" id="pb-grid">
+
+          <div class="court-card" data-area="coastal">
+            <div>
+              <div class="court-area">Point Loma · Coastal</div>
+              <div class="court-name">Barnes Tennis Center</div>
+              <div class="court-address">4490 W. Point Loma Blvd, SD 92107</div>
+              <div class="court-meta"><span class="court-pill">Lighted</span><span class="court-pill">Lessons Available</span><span class="court-pill">Tournaments</span><span class="court-pill">Day Pass</span></div>
+            </div>
+            <div><div class="court-courts">12+<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="north">
+            <div>
+              <div class="court-area">Encinitas · North County</div>
+              <div class="court-name">Bobby Riggs Racket &amp; Paddle</div>
+              <div class="court-address">875 Santa Fe Dr, Encinitas 92024</div>
+              <div class="court-meta"><span class="court-pill">Lighted</span><span class="court-pill">Leagues</span><span class="court-pill">Clinics</span><span class="court-pill">Private Lessons</span></div>
+            </div>
+            <div><div class="court-courts">12<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="north">
+            <div>
+              <div class="court-area">Pacific Highlands Ranch · North County</div>
+              <div class="court-name">Pacific Highlands Ranch Rec Center</div>
+              <div class="court-address">6 Citracado Pkwy, SD 92130</div>
+              <div class="court-meta"><span class="court-pill free">Free</span><span class="court-pill">6 Indoor</span><span class="court-pill">2 Outdoor</span><span class="court-pill">Drop-In</span></div>
+            </div>
+            <div><div class="court-courts">8<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="central">
+            <div>
+              <div class="court-area">Balboa Park · Central SD</div>
+              <div class="court-name">Municipal Gym + Activity Center</div>
+              <div class="court-address">2221 Morley Field Dr, SD 92104</div>
+              <div class="court-meta"><span class="court-pill free">Free</span><span class="court-pill">9 Indoor (Gym)</span><span class="court-pill">5 More (Activity Ctr)</span></div>
+            </div>
+            <div><div class="court-courts">14<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="north">
+            <div>
+              <div class="court-area">Penasquitos · North County</div>
+              <div class="court-name">Canyonside / RPTC</div>
+              <div class="court-address">12350 Black Mountain Rd, SD 92129</div>
+              <div class="court-meta"><span class="court-pill">Lighted</span><span class="court-pill">Leagues</span><span class="court-pill">Drop-In</span><span class="court-pill">Tennis+PB</span></div>
+            </div>
+            <div><div class="court-courts">12<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="coastal">
+            <div>
+              <div class="court-area">Downtown · Waterfront</div>
+              <div class="court-name">Waterfront Park</div>
+              <div class="court-address">1600 Pacific Hwy, SD 92101</div>
+              <div class="court-meta"><span class="court-pill free">Free</span><span class="court-pill">First Come</span><span class="court-pill">Equipment Rental</span><span class="court-pill">Dog Park</span></div>
+            </div>
+            <div><div class="court-courts">2<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="east">
+            <div>
+              <div class="court-area">Del Cerro · East County</div>
+              <div class="court-name">Del Cerro Tennis Club</div>
+              <div class="court-address">6467 Del Cerro Blvd, SD 92120</div>
+              <div class="court-meta"><span class="court-pill free">Free</span><span class="court-pill">Outdoor</span><span class="court-pill">Reservable</span><span class="court-pill">Instruction</span></div>
+            </div>
+            <div><div class="court-courts">12<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="east">
+            <div>
+              <div class="court-area">Santee · East County</div>
+              <div class="court-name">Big Rock Park</div>
+              <div class="court-address">Mast Blvd &amp; Carlton Hills Blvd, Santee</div>
+              <div class="court-meta"><span class="court-pill free">Free</span><span class="court-pill">8 Outdoor</span><span class="court-pill">Equipment Rental</span><span class="court-pill">Workshops</span></div>
+            </div>
+            <div><div class="court-courts">8<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="coastal">
+            <div>
+              <div class="court-area">Pacific Beach · Coastal</div>
+              <div class="court-name">Pacific Beach Recreation Center</div>
+              <div class="court-address">1405 Diamond St, SD 92109</div>
+              <div class="court-meta"><span class="court-pill free">Free</span><span class="court-pill">Lighted</span><span class="court-pill">Organized Play</span><span class="court-pill">Mixers</span></div>
+            </div>
+            <div><div class="court-courts">8<span>courts</span></div></div>
+          </div>
+
+          <div class="court-card" data-area="north">
+            <div>
+              <div class="court-area">Carmel Valley · North County</div>
+              <div class="court-name">Carmel Valley Rec Center</div>
+              <div class="court-address">3777 Townsgate Drive, SD 92130</div>
+              <div class="court-meta"><span class="court-pill free">Free</span><span class="court-pill">6 Indoor</span><span class="court-pill">Drop-In Available</span></div>
+            </div>
+            <div><div class="court-courts">6<span>courts</span></div></div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
 
-  <!-- LESSONS -->
-  <section class="lessons" id="lessons">
-    <div class="container">
-      <div class="label-tag">Lesson Formats</div>
-      <h2 class="big-title">How We Work</h2>
-      <div class="lessons-table">
-
-        <div class="lesson-row">
-          <div class="l-index">01</div>
-          <div class="l-name">
-            <h3>Private Lessons</h3>
-            <p>One-on-one instruction for all ages and levels with complete focus on your specific goals and areas for improvement.</p>
-          </div>
-          <div class="l-features">
-            <span>All skill levels and ages welcome</span>
-            <span>Complete individual focus</span>
-            <span>Target any aspect of your game</span>
-            <span>Half-hour increments, day or evening</span>
-          </div>
-          <div class="l-badge">
-            <span class="badge">Most Popular</span>
-          </div>
-        </div>
-
-        <div class="lesson-row">
-          <div class="l-index">02</div>
-          <div class="l-name">
-            <h3>Group Instruction</h3>
-            <p>Available for up to four players. Match play situations or high-intensity cardio and footwork drills for all levels.</p>
-          </div>
-          <div class="l-features">
-            <span>Up to 4 participants</span>
-            <span>Match play or drill formats</span>
-            <span>Great for friends and family</span>
-            <span>Social, competitive atmosphere</span>
-          </div>
-          <div class="l-badge">
-            <span class="badge">Up to 4 Players</span>
-          </div>
-        </div>
-
-        <div class="lesson-row">
-          <div class="l-index">03</div>
-          <div class="l-name">
-            <h3>Adult Clinics</h3>
-            <p>Skill-level specific clinics for adults. Schedule and availability vary — reach out for current offerings.</p>
-          </div>
-          <div class="l-features">
-            <span>Adult-focused programming</span>
-            <span>Grouped by skill level</span>
-            <span>High-energy structured sessions</span>
-            <span>Call or email for current schedule</span>
-          </div>
-          <div class="l-badge">
-            <span class="badge">By Availability</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- AI STROKE ANALYSIS -->
+  <!-- AI ANALYSIS -->
   <section class="analysis-section" id="analysis">
     <div class="container">
-
       <div class="analysis-intro">
-        <div class="analysis-intro-text">
-          <div class="label-tag">Stroke Analysis</div>
+        <div>
+          <div class="label-tag">AI Stroke Analysis</div>
           <h2 class="big-title">See What's<br><span style="color:var(--accent);">Holding</span><br>You Back</h2>
         </div>
         <div>
-          <p class="body-text">Upload a 15–60 second video of your strokes and receive a full coaching analysis in under two minutes — built on IMG Academy methodology.</p>
-          <p class="body-text">Every report covers mechanics, your single highest-priority fix, and two specific drills to address it. The same detail you'd get in a private lesson, available any time.</p>
+          <p class="body-text">Upload a 15–60 second video of your strokes and get a full coaching analysis in under two minutes — built on IMG Academy methodology.</p>
+          <p class="body-text">Every report covers mechanics, your highest-priority fix, and two specific drills. The same detail you'd get in a private lesson, available any time, free.</p>
         </div>
       </div>
-
-      <!-- How it works -->
       <div class="analysis-how">
-        <div class="analysis-step">
-          <div class="analysis-step-num">01</div>
-          <h4>Upload</h4>
-          <p>Record 15–60 seconds from the side. Upload directly from your phone or computer.</p>
-        </div>
-        <div class="analysis-step">
-          <div class="analysis-step-num">02</div>
-          <h4>Extract</h4>
-          <p>The system pulls 10 key frames across your swing sequence automatically.</p>
-        </div>
-        <div class="analysis-step">
-          <div class="analysis-step-num">03</div>
-          <h4>Analyze</h4>
-          <p>Your footage is evaluated across all frames — contact point, swing path, follow-through, footwork.</p>
-        </div>
-        <div class="analysis-step">
-          <div class="analysis-step-num">04</div>
-          <h4>Report</h4>
-          <p>Receive a structured breakdown: strengths, priority fix, and drill recommendations.</p>
-        </div>
+        <div class="analysis-step"><div class="analysis-step-num">01</div><h4>Upload</h4><p>Record 15–60 seconds from the side. Upload from phone or computer.</p></div>
+        <div class="analysis-step"><div class="analysis-step-num">02</div><h4>Extract</h4><p>10 key frames pulled automatically across your swing sequence.</p></div>
+        <div class="analysis-step"><div class="analysis-step-num">03</div><h4>Analyze</h4><p>Evaluated across all frames — contact point, swing path, follow-through, footwork.</p></div>
+        <div class="analysis-step"><div class="analysis-step-num">04</div><h4>Report</h4><p>Strengths, priority fix, and drill recommendations delivered instantly.</p></div>
       </div>
 
-      <!-- Upload form -->
       <div id="analysisFormWrap" class="analysis-form-wrap">
         <div class="analysis-form-header">
           <div class="analysis-form-header-left">
@@ -1550,82 +859,45 @@
           <span class="analysis-cost-note">Results in ~90 seconds</span>
         </div>
         <form class="analysis-form-body" id="analysisForm" onsubmit="submitAnalysis(event)">
-
-          <!-- Left: Video upload -->
           <div class="analysis-panel">
             <div class="analysis-panel-label">01 — Your Video</div>
-
-            <div class="drop-zone" id="dropZone"
-                 ondragover="handleDragOver(event)"
-                 ondragleave="handleDragLeave(event)"
-                 ondrop="handleDrop(event)">
-
-              <!-- Desktop: standard file picker (drag & drop works here too) -->
-              <input type="file" id="videoFile" name="video"
-                     accept="video/mp4,video/quicktime,video/x-msvideo,video/*"
-                     onchange="handleFileSelect(event)"
-                     class="desktop-input" required />
-
+            <div class="drop-zone" id="dropZone" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+              <div class="desktop-input-wrap">
+                <input type="file" id="videoFile" name="video" accept="video/mp4,video/quicktime,video/x-msvideo,video/*" onchange="handleFileSelect(event)" class="desktop-input" />
+              </div>
               <svg class="drop-icon" viewBox="0 0 40 40" fill="none">
                 <circle cx="20" cy="20" r="18" stroke="rgba(200,169,110,0.5)" stroke-width="1.2"/>
                 <path d="M17 17L20 14L23 17" stroke="rgba(200,169,110,0.7)" stroke-width="1.2" stroke-linecap="round"/>
                 <path d="M20 14V24" stroke="rgba(200,169,110,0.7)" stroke-width="1.2" stroke-linecap="round"/>
                 <path d="M14 28H26" stroke="rgba(200,169,110,0.7)" stroke-width="1.2" stroke-linecap="round"/>
               </svg>
-
-              <!-- Desktop label -->
               <h4 class="desktop-only">Drop Video Here</h4>
               <p class="desktop-only">Or click to browse files</p>
               <div class="drop-types desktop-only">MP4 · MOV · AVI · Max 500MB</div>
-
-              <!-- Mobile: two distinct buttons -->
               <div class="mobile-upload-btns">
                 <label class="mobile-btn mobile-btn-camera" for="videoCamera">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <rect x="1" y="4" width="14" height="10" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
-                    <circle cx="8" cy="9" r="2.5" stroke="currentColor" stroke-width="1.2"/>
-                    <path d="M5.5 4L6.5 2H9.5L10.5 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="4" width="14" height="10" rx="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="9" r="2.5" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 4L6.5 2H9.5L10.5 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
                   Record Now
                 </label>
-                <input type="file" id="videoCamera" accept="video/*" capture="environment"
-                       onchange="handleFileSelect(event)" style="display:none;" />
-
+                <input type="file" id="videoCamera" accept="video/*" capture="environment" onchange="handleFileSelect(event)" style="display:none;" />
                 <label class="mobile-btn mobile-btn-library" for="videoLibrary">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <rect x="1" y="2" width="14" height="12" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
-                    <path d="M1 10.5L5 7L7.5 9.5L10 7.5L15 11.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <circle cx="5.5" cy="5.5" r="1.2" stroke="currentColor" stroke-width="1"/>
-                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="2" width="14" height="12" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 10.5L5 7L7.5 9.5L10 7.5L15 11.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="5.5" cy="5.5" r="1.2" stroke="currentColor" stroke-width="1"/></svg>
                   Choose from Library
                 </label>
-                <input type="file" id="videoLibrary" accept="video/*"
-                       onchange="handleFileSelect(event)" style="display:none;" />
+                <input type="file" id="videoLibrary" accept="video/*" onchange="handleFileSelect(event)" style="display:none;" />
               </div>
-
               <div class="drop-selected" id="dropSelected"></div>
             </div>
-
             <div class="shoot-tips">
               <p><strong>Best results:</strong> Film from the side at court level, 15–60 seconds, 3–8 stroke reps. Good lighting, steady camera.</p>
             </div>
           </div>
-
-          <!-- Right: Details + submit -->
           <div class="analysis-panel">
             <div class="analysis-panel-label">02 — Your Details</div>
-
             <div class="af-row">
-              <div class="af-field">
-                <label for="studentName">Name</label>
-                <input type="text" id="studentName" placeholder="First name" />
-              </div>
-              <div class="af-field">
-                <label for="studentAge">Age</label>
-                <input type="number" id="studentAge" placeholder="Optional" min="5" max="99" />
-              </div>
+              <div class="af-field"><label for="studentName">Name</label><input type="text" id="studentName" placeholder="First name" /></div>
+              <div class="af-field"><label for="studentAge">Age</label><input type="number" id="studentAge" placeholder="Optional" min="5" max="99" /></div>
             </div>
-
             <div class="af-field">
               <label for="strokeType">Stroke to Analyze</label>
               <select id="strokeType">
@@ -1637,7 +909,6 @@
                 <option value="volley">Volley</option>
               </select>
             </div>
-
             <div class="af-field">
               <label for="playerLevel">Playing Level</label>
               <select id="playerLevel">
@@ -1647,25 +918,18 @@
                 <option value="junior">Junior — Under 18</option>
               </select>
             </div>
-
             <div class="af-field">
               <label for="concerns">What are you struggling with? <span style="opacity:0.4">(optional)</span></label>
               <textarea id="concerns" placeholder="e.g. My forehand keeps going into the net under pressure..."></textarea>
             </div>
-
-            <button type="submit" class="btn-analyze" id="analyzeBtn">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/>
-                <path d="M5 7L7 9L10 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+            <button type="button" class="btn-analyze" id="analyzeBtn" onclick="submitAnalysis(event)">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M5 7L7 9L10 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               Analyze My Strokes
             </button>
           </div>
-
         </form>
       </div>
 
-      <!-- Results panel -->
       <div class="an-results" id="anResults">
         <div class="an-results-header">
           <div>
@@ -1678,11 +942,10 @@
           <div class="analysis-output" id="analysisOutput"></div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- Loading overlay -->
+  <!-- LOADING OVERLAY -->
   <div class="an-loading" id="anLoading">
     <div class="an-spinner"></div>
     <div class="an-loading-label">Analyzing Your Footage</div>
@@ -1699,31 +962,123 @@
     <div class="cta-inner">
       <div class="label-tag" style="justify-content:center;">Book a Lesson</div>
       <h2 class="big-title cta-title">Ready to <span class="ghost">Start?</span></h2>
-      <p class="cta-sub">Call or email — day and evening slots available across San Diego.</p>
-      <div class="cta-btns">
-        <a href="tel:8587524321" class="btn-gold">📞 &nbsp;858-752-4321</a>
-        <a href="/cdn-cgi/l/email-protection#7d101c0f165315081e1614130e3d1a101c1411531e1210" class="btn-outline">✉️ &nbsp;Send an Email</a>
-      </div>
-      <p class="cta-footnote">Day and evening availability · All skill levels welcome · Half-hour increments</p>
+      <p class="cta-sub">All inquiries go directly to Mark. He'll take the lesson or match you with the right pro for your area.</p>
+
+      <form id="contactForm" action="https://formspree.io/f/xvzwvdkn" method="POST" class="contact-form">
+        <div class="cf-row">
+          <div class="cf-field">
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="cf-field">
+            <input type="email" name="email" placeholder="Email Address" required />
+          </div>
+        </div>
+        <div class="cf-row">
+          <div class="cf-field">
+            <input type="tel" name="phone" placeholder="Phone (optional)" />
+          </div>
+          <div class="cf-field">
+            <select name="area">
+              <option value="" disabled selected>Your Area in SD</option>
+              <option>North County</option>
+              <option>Coastal (La Jolla / PB / OB)</option>
+              <option>Central San Diego</option>
+              <option>East County</option>
+              <option>South Bay</option>
+            </select>
+          </div>
+        </div>
+        <div class="cf-field">
+          <textarea name="message" placeholder="Tell us about your goals — level, stroke you want to work on, availability..." rows="3"></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="New Lesson Request — San Diego Tennis" />
+        <input type="hidden" name="_replyto" value="mark.huckins@gmail.com" />
+        <button type="submit" class="btn-gold" style="width:100%;justify-content:center;padding:1rem;">Send Lesson Request</button>
+        <div id="cf-success" style="display:none;margin-top:1rem;color:var(--accent);font-size:0.85rem;letter-spacing:0.05em;">Got it — Mark will be in touch shortly.</div>
+      </form>
+
+      <p class="cta-footnote" style="margin-top:1.5rem;">Or call directly: <a href="tel:8587524321" style="color:var(--accent);text-decoration:none;">858-752-4321</a> &nbsp;·&nbsp; All skill levels welcome &nbsp;·&nbsp; County-wide</p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="f-logo">Huckins <span>Tennis</span></div>
+    <div class="f-logo">San Diego <span>Tennis</span></div>
     <div class="f-links">
-      <a href="#about">About</a>
-      <a href="#training">Training</a>
-      <a href="#lessons">Lessons</a>
+      <a href="#featured">Featured Pro</a>
+      <a href="#directory">Find a Pro</a>
+      <a href="#courts">Courts</a>
       <a href="#analysis">AI Analysis</a>
       <a href="#contact">Contact</a>
     </div>
-    <div class="f-logo" style="font-size:0.75rem;">© 2026 SD Tennis Lessons</div>
+    <div class="f-logo" style="font-size:0.75rem;">© 2026 San Diego Tennis</div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // All functions on window scope to prevent Cloudflare script injection conflicts
+  <script>
+    // ── Contact form (Formspree AJAX) ──
+    var cf = document.getElementById('contactForm');
+    if (cf) {
+      cf.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = cf.querySelector('button[type="submit"]');
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+        fetch(cf.action, {
+          method: 'POST',
+          body: new FormData(cf),
+          headers: { 'Accept': 'application/json' }
+        }).then(function(res) {
+          if (res.ok) {
+            cf.reset();
+            document.getElementById('cf-success').style.display = 'block';
+            btn.textContent = 'Sent!';
+          } else {
+            btn.textContent = 'Send Lesson Request';
+            btn.disabled = false;
+            alert('Something went wrong. Please email mark.huckins@gmail.com directly.');
+          }
+        }).catch(function() {
+          btn.textContent = 'Send Lesson Request';
+          btn.disabled = false;
+          alert('Something went wrong. Please email mark.huckins@gmail.com directly.');
+        });
+      });
+    }
 
+    // ── Directory tabs & filters ──
+    function switchTab(tab, el) {
+      document.querySelectorAll('.dir-tab').forEach(function(t) { t.classList.remove('active'); });
+      document.querySelectorAll('.dir-panel').forEach(function(p) { p.classList.remove('active'); });
+      el.classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+    }
+
+    function filterPros(area, el) {
+      document.querySelectorAll('#pro-filters .filter-btn').forEach(function(b) { b.classList.remove('active'); });
+      el.classList.add('active');
+      document.querySelectorAll('#pros-grid .pro-card').forEach(function(card) {
+        card.style.display = (area === 'all' || card.dataset.area === area) ? 'block' : 'none';
+      });
+    }
+
+
+    function filterPickleball(area, el) {
+      document.querySelectorAll('#pb-filters .filter-btn').forEach(function(b) { b.classList.remove('active'); });
+      el.classList.add('active');
+      document.querySelectorAll('#pb-grid .court-card').forEach(function(card) {
+        card.style.display = (area === 'all' || card.dataset.area === area) ? 'grid' : 'none';
+      });
+    }
+
+    function filterCourts(area, el) {
+      document.querySelectorAll('#court-filters .filter-btn').forEach(function(b) { b.classList.remove('active'); });
+      el.classList.add('active');
+      document.querySelectorAll('#courts-grid .court-card').forEach(function(card) {
+        card.style.display = (area === 'all' || card.dataset.area === area) ? 'grid' : 'none';
+      });
+    }
+
+    // ── Analysis functions — all on window scope to prevent Cloudflare interference ──
     window.selectedFile = null;
     window.stepTimer = null;
     window.stepIdx = 0;
@@ -1781,7 +1136,11 @@
 
     window.submitAnalysis = function(e) {
       e.preventDefault();
-      var vid = window.selectedFile || document.getElementById('videoFile').files[0];
+      var vid = window.selectedFile;
+      if (!vid) {
+        var fi = document.getElementById('videoFile');
+        if (fi && fi.files && fi.files[0]) vid = fi.files[0];
+      }
       if (!vid) { alert('Please select or record a video first.'); return; }
 
       document.getElementById('anLoading').classList.add('active');
@@ -1817,11 +1176,20 @@
     };
 
     window.showResults = function(result) {
+      // Notify Mark via Formspree when an analysis is completed
+      var fd = new FormData();
+      fd.append('name', result.student_name || 'Anonymous');
+      fd.append('stroke', result.stroke_type || 'general');
+      fd.append('frames', result.frames_analyzed || 0);
+      fd.append('_subject', 'AI Analysis Completed — ' + (result.student_name || 'Anonymous') + ' · San Diego Tennis');
+      fd.append('message', 'A stroke analysis was just completed. Student: ' + (result.student_name || 'Anonymous') + ', Stroke: ' + (result.stroke_type || 'general') + ', Frames analyzed: ' + (result.frames_analyzed || 0));
+      fetch('https://formspree.io/f/xvzwvdkn', { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } });
+
       document.getElementById('analysisFormWrap').style.display = 'none';
       var name = result.student_name || 'Your';
       var stroke = (result.stroke_type || 'stroke').replace(/_/g, ' ');
       document.getElementById('anResultsTitle').textContent = name + "'s Analysis";
-      document.getElementById('anResultsMeta').textContent = stroke.charAt(0).toUpperCase() + stroke.slice(1) + ' · ' + result.frames_analyzed + ' frames analyzed';
+      document.getElementById('anResultsMeta').textContent = stroke.charAt(0).toUpperCase() + stroke.slice(1) + ' \u00b7 ' + result.frames_analyzed + ' frames analyzed';
       document.getElementById('analysisOutput').innerHTML = window.renderMd(result.analysis);
       var panel = document.getElementById('anResults');
       panel.classList.add('visible');
